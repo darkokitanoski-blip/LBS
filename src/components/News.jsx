@@ -1,4 +1,5 @@
 import ArrowIcon from "./ArrowIcon.jsx";
+import SectionTransition from "./SectionTransition.jsx";
 const news = [
   {
     date: "30 APRIL 2024",
@@ -24,9 +25,20 @@ export default function News() {
   return (
     <section className="news section" id="news">
       <div className="ticker">
-        <span><ArrowIcon size="sm" /> ÖPPET HUS 19 NOV KL.18</span>
-        <span><ArrowIcon size="sm" /> ÖPPET HUS 19 NOV KL.18</span>
-        <span><ArrowIcon size="sm" /> ÖPPET HUS 19 NOV KL.18</span>
+        <div className="ticker-track">
+          <span> ÖPPET HUS 19 NOV KL.18</span>
+          <span> ÖPPET HUS 19 NOV KL.18</span>
+          <span> ÖPPET HUS 19 NOV KL.18</span>
+          <span> ÖPPET HUS 19 NOV KL.18</span>
+          <span> ÖPPET HUS 19 NOV KL.18</span>
+          <span> ÖPPET HUS 19 NOV KL.18</span>
+          <span> ÖPPET HUS 19 NOV KL.18</span>
+          <span> ÖPPET HUS 19 NOV KL.18</span>
+          <span> ÖPPET HUS 19 NOV KL.18</span>
+          <span> ÖPPET HUS 19 NOV KL.18</span>
+          <span> ÖPPET HUS 19 NOV KL.18</span>
+          <span> ÖPPET HUS 19 NOV KL.18</span>
+        </div>
       </div>
 
       <div className="news-heading">
@@ -42,18 +54,24 @@ export default function News() {
                 <span>[ IMAGE ]</span>
               </div>
             </div>
+
             <div className="news-content">
               <span className="meta">[ {item.date} ]</span>
               <span className="meta">{item.type}</span>
               <h3>{item.title}</h3>
               <p>{item.text}</p>
-              <a href="#news">LÄS MER <ArrowIcon size="sm" /></a>
+              <a href="#news">
+                LÄS MER <ArrowIcon size="sm" />
+              </a>
             </div>
           </article>
         ))}
       </div>
 
-      <a className="news-more" href="#news">SE ALLA NYHETER <ArrowIcon size="md" /></a>
+      <a className="news-more" href="#news">
+        SE ALLA NYHETER <ArrowIcon size="md" />
+      </a>
+
     </section>
   );
 }

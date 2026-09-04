@@ -12,7 +12,7 @@ export default function CreativeGallery() {
     <section className="gallery section">
       <div className="gallery-heading">
         <p className="mono-label dark">[ ELEVERS SKAPANDE ]</p>
-        <h2>SKAPA.<br /><span>TESTA.</span><br />UTVECKLA.</h2>
+        <h2>SKAPA.<span>TESTA.</span>UTVECKLA.</h2>
       </div>
       <div className="gallery-grid">
         {images.map((image, index) => (

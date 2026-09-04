@@ -55,7 +55,7 @@ export default function Hero() {
         </div>
         <OpenHouseCarousel />
       </div>
-      <div className="hero-bottom"><span>SCROLLA</span><ArrowIcon direction="down" size="md" className="scroll-arrow" /></div>
+      <div className="hero-bottom"></div>
     </section>
   );
 }
