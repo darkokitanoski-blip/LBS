@@ -1,0 +1,42 @@
+import { useState } from "react";
+import ArrowIcon from "./ArrowIcon.jsx";
+
+const navItems = [
+  ["Våra skolor", "#schools"],
+  ["Om oss", "#about"],
+  ["Kontakta oss", "#contact"],
+  ["Våra program", "#programs"],
+];
+
+export default function Header() {
+  const [open, setOpen] = useState(false);
+
+  return (
+    <header className="header">
+      <a className="brand" href="#" aria-label="LBS Kreativa Gymnasiet">
+        <span className="brand-box">LBS</span>
+        <span className="brand-text">KREATIVA<br />GYMNASIET</span>
+      </a>
+
+      <button
+        className="menu-button"
+        onClick={() => setOpen(!open)}
+        aria-label="Öppna meny"
+        aria-expanded={open}
+      >
+        <span>[</span><span>MENU</span><span>]</span>
+      </button>
+
+      <nav className={`nav ${open ? "nav-open" : ""}`}>
+        {navItems.map(([label, href]) => (
+          <a key={label} href={href} onClick={() => setOpen(false)}>
+            {label}
+          </a>
+        ))}
+        <a className="nav-cta" href="#open-house" onClick={() => setOpen(false)}>
+          ÖPPET HUS <ArrowIcon size="sm" />
+        </a>
+      </nav>
+    </header>
+  );
+}
