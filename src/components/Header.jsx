@@ -14,8 +14,10 @@ export default function Header() {
   return (
     <header className="header">
       <a className="brand" href="#" aria-label="LBS Kreativa Gymnasiet">
-        <span className="brand-box">LBS</span>
-        <span className="brand-text">KREATIVA<br />GYMNASIET</span>
+        <span className="brand-box">
+          <img src="/lbslogosvg.svg" alt="LBS" />
+        </span>
+
       </a>
 
       <button

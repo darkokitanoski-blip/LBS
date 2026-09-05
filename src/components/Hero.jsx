@@ -2,8 +2,8 @@ import { useEffect, useState } from "react";
 import ArrowIcon from "./ArrowIcon.jsx";
 
 const openHouseSlides = [
-  { date: "LÖR 21 JAN", time: "12:00", title: "ÖPPET HUS", text: "Kom och upptäck våra utbildningar, lokaler och kreativa miljöer." },
-  { date: "LÖR 18 FEB", time: "12:00", title: "ÖPPET HUS", text: "Träffa elever och lärare och få en känsla för livet på LBS." },
+  { date: "LÖR 19 NOV", time: "18:00", title: "ÖPPET HUS", text: "Kom och upptäck våra utbildningar, lokaler och kreativa miljöer." },
+  { date: "LÖR 19 NOV", time: "18:00", title: "ÖPPET HUS", text: "Träffa elever och lärare och få en känsla för livet på LBS." },
   { date: "LÖR 18 MAR", time: "12:00", title: "ÖPPET HUS", text: "Se vad du kan skapa inom game, design, media, AI och utveckling." }
 ];
 

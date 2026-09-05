@@ -6,6 +6,7 @@ const schools = [
 ];
 
 export default function Schools() {
+
   return (
     <section className="schools section-dark" id="schools">
       <div className="schools-copy">

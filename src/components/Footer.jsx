@@ -2,7 +2,7 @@ import ArrowIcon from "./ArrowIcon.jsx";
 const columns = [
   {
     title: "Kontakta oss",
-    items: ["KUNGSGATAN 22", "123 45, GÖTEBORG"]
+    items: ["BREDGATAN 10", "222 21, LUND"]
   },
   {
     title: "Kvalitet",
@@ -20,8 +20,9 @@ export default function Footer() {
       <div className="footer-top">
         <div className="footer-brand">
           <div className="brand">
-            <span className="brand-box">LBS</span>
-            <span className="brand-text">KREATIVA<br />GYMNASIET</span>
+            <span className="brand-box">
+              <img src="/lbslogosvg.svg" alt="LBS" />
+            </span>
           </div>
         </div>
 
@@ -36,13 +37,14 @@ export default function Footer() {
       </div>
 
       <div className="footer-bottom">
-        <h2>LBS KREATIVA GYMNASIET</h2>
-        <div className="footer-links">
+        <h2 style={{ textAlign: 'center' }}>LBS KREATIVA GYMNASIET</h2>
+        <div className="footer-links" style={{ display: 'flex', justifyContent: 'center', gap: '40px' }}>
           <a href="#schools">VÅRA SKOLOR</a>
           <a href="#about">OM OSS</a>
           <a href="#contact">KONTAKTA OSS</a>
           <a href="#programs">VÅRA PROGRAM</a>
-          <a href="#open-house">ÖPPET HUS <ArrowIcon size="sm" /></a>
+          <a href="#open-house" style={{ position: 'relative' }}>ÖPPET HUS <ArrowIcon size="sm" /></a>
+
         </div>
       </div>
     </footer>
