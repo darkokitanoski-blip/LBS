@@ -1,3 +1,5 @@
+  // komponent där jag skapar Bild - MockUp 
+
 export default function ImagePlaceholder({ label = "[ IMAGE ]", className = "", src = "", alt = "" }) {
   return (
     <div className={`image-placeholder ${className}`}>

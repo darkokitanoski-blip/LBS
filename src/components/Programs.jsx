@@ -8,6 +8,8 @@ const programs = [
   { title: "ESTETIK", desc: "Kreativa uttryck, bild, form och digital produktion.", color: "cyan" },
 ];
 
+  // komponent där jag skapar sektion för programmer i skolan, och implemnterar ikon komponent 
+
 export default function Programs() {
   return (
     <section className="programs section-dark" id="programs">

@@ -1,6 +1,8 @@
 import ArrowIcon from "./ArrowIcon.jsx";
 import ImagePlaceholder from "./ImagePlaceholder.jsx";
 
+
+  // komponent där jag Header för sidan, och jag implementa ikon komponent och ImagePlaceholder komponent
 export default function Intro() {
   return (
     <section className="intro section" id="about">

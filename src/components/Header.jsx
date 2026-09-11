@@ -1,6 +1,8 @@
 import { useState } from "react";
 import ArrowIcon from "./ArrowIcon.jsx";
 
+  // komponent där jag skapar Header för sidan, och jag implementa ikon komonent och också använder useState från Reacts library
+
 const navItems = [
   ["Våra skolor", "#schools"],
   ["Om oss", "#about"],

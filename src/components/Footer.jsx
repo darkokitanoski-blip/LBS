@@ -1,4 +1,6 @@
 import ArrowIcon from "./ArrowIcon.jsx";
+
+  // komponent för en footer där jag också implemnetera ikon komponenten jag skapa.
 const columns = [
   {
     title: "Kontakta oss",

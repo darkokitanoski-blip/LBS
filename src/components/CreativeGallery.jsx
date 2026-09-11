@@ -1,5 +1,6 @@
 import ImagePlaceholder from "./ImagePlaceholder.jsx";
 
+  // komponent där jag skapa en sektion för krativitets visande, och jag implementera ImagePlaceholder som komponent
 const images = [
   { label: "[ GAME / 01 ]" },
   { label: "[ DESIGN / 02 ]" },

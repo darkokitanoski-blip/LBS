@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import ArrowIcon from "./ArrowIcon.jsx";
 
+
+  // komponent där jag skapar Hero för sidan alltså där vikitgast finns, och jag implementa ikon komonent och också använder useState och UseEffect från Reacts library
 const openHouseSlides = [
   { date: "LÖR 19 NOV", time: "18:00", title: "ÖPPET HUS", text: "Kom och upptäck våra utbildningar, lokaler och kreativa miljöer." },
   { date: "LÖR 19 NOV", time: "18:00", title: "ÖPPET HUS", text: "Träffa elever och lärare och få en känsla för livet på LBS." },

@@ -1,31 +1,32 @@
-# LBS Kreativa Gymnasiet – Enhanced React implementation
+# LBS Kreativa Gymnasiet – Förbättrad React-implementation
 
-Vite + React implementation based on the supplied LBS Grafisk manual.
+Vite + React-implementation baserad på den medföljande grafiska manualen för LBS.
 
-## Run
+## Kör projektet
 
 ```bash
 npm install
+
 npm run dev
 ```
 
-## Included
+## Innehåller
 
-- `src/app.jsx` – main page composition
-- Big Shoulders Text, Onest and IBM Plex Mono
-- LBS color system and monochromatic pair approach
-- Pixel-block inspired layouts
-- Text blocks and keyboard-symbol details
-- Animated Open House carousel
-- Reusable `ImagePlaceholder` component
-- Dedicated creative image gallery boilerplate
-- Rich hover/micro-interactions
-- Responsive navigation and layouts
-- Swedish-character-friendly typography and line-height
+* `src/app.jsx` – huvudkompositionen för sidan
+* Big Shoulders Text, Onest och IBM Plex Mono
+* LBS färgsystem och monokromatiskt färgpar
+* Pixelblock-inspirerade layouter
+* Textblock och detaljer inspirerade av tangentbordssymboler
+* Animerad Open House-karusell
+* Återanvändbar `ImagePlaceholder`-komponent
+* Grundstruktur för ett separat kreativt bildgalleri
+* Avancerade hover-effekter och mikrointeraktioner
+* Responsiv navigering och layout
+* Typografi och radavstånd anpassade för svenska tecken
 
-## Add real images
+## Lägg till riktiga bilder
 
-Put images in `public/images/` and use:
+Lägg bilderna i `public/images/` och använd:
 
 ```jsx
 <ImagePlaceholder
@@ -34,6 +35,8 @@ Put images in `public/images/` and use:
 />
 ```
 
+### Designanteckningar
 
-### Design notes
-The page transitions intentionally create larger breathing spaces between major sections, with continuously moving LBS-style typography and subtle floating pixel details. Large Swedish headings use extra line-height and top/bottom breathing room so Å, Ä and Ö are not visually cramped or clipped.
+Sidans övergångar skapar medvetet större mellanrum mellan de olika huvudsektionerna. Samtidigt används kontinuerligt rörlig LBS-inspirerad typografi och subtila flytande pixeldetaljer.
+
+Stora svenska rubriker använder extra radavstånd samt utrymme ovanför och under texten för att Å, Ä och Ö inte ska kännas trånga eller riskera att klippas av.

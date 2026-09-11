@@ -1,5 +1,7 @@
 import ArrowIcon from "./ArrowIcon.jsx";
 import SectionTransition from "./SectionTransition.jsx";
+
+  // komponent där jag skapr Nyhet sektion för sidan, och jag implementa ikon komponent och SectionTransition komponent för att göra carousel typ av funktionallitet 
 const news = [
   {
     date: "30 APRIL 2024",

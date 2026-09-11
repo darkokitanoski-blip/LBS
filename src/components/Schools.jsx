@@ -5,6 +5,8 @@ const schools = [
   "Stockholm Norra", "Stockholm Södra", "Trollhättan", "Varberg", "Växjö", "Örebro"
 ];
 
+
+  // komponent där jag skapar Skolor lista sektion för sidan, och jag implementa ikon komonent 
 export default function Schools() {
 
   return (

@@ -6,6 +6,8 @@ const messages = [
   "LBS KREATIVA GYMNASIET",
 ];
 
+
+  // komponent där jag skapar Carousel animation för all de delarna som behöer det i sidan, och jag implementa ikon komonent
 export default function SectionTransition({ variant = "green" }) {
   return (
     <section className={`section-transition transition-${variant}`} aria-hidden="true">

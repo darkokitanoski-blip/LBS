@@ -8,7 +8,7 @@ import News from "./components/News.jsx";
 import Schools from "./components/Schools.jsx";
 import Footer from "./components/Footer.jsx";
 
-
+// här är app.jsx eller filen där alla komponenter implenteras för att bygga huvud sidan
 export default function App() {
   return (
     <div className="site">

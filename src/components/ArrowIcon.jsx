@@ -5,6 +5,8 @@ export default function ArrowIcon({ direction = "right", size = "md", className 
     down: "rotate(90 12 12)",
   };
 
+
+  // komponent där jag skapar svg ikon för pil
   return (
     <svg
       className={`arrow-icon arrow-icon-${size} ${className}`}
