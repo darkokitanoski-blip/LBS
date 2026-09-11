@@ -12,7 +12,6 @@ import Footer from "./components/Footer.jsx";
 export default function App() {
   return (
     <div className="site">
-
       <Header />
       <main>
         <Hero />
@@ -20,7 +19,6 @@ export default function App() {
         <SectionTransition variant="green" />
         <Programs />
         <CreativeGallery />
-
         <News />
         <Schools />
         <SectionTransition variant="magenta" />
