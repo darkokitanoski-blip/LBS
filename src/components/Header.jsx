@@ -47,7 +47,7 @@ export default function Header() {
   return (
     <header
       className="header"
-      style={{ top: scrollDirection === "down" ? "-10%" : "0%", backgroundColor: Transparent, width: Width, padding: Padding }}
+      style={{ top: scrollDirection === "down" ? "-40%" : "0%", backgroundColor: Transparent, width: Width, padding: Padding }}
     >
       <a className="brand" href="#" aria-label="LBS Kreativa Gymnasiet">
         <span className="brand-box">
