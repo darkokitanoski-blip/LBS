@@ -445,12 +445,12 @@ h4 {
     color: var(--black);
     transition: transform .25s ease;
     clip-path: polygon(
-        0 10%,       /* left side starts lower */
+        0 10%,      
         14% 10%,
         14% 0,
-        76% 0,       /* top edge */
+        76% 0,      
         76% 7%,
-        100% 7%,     /* right cut is different */
+        100% 7%,    
         100% 100%,
         0 100%
     );  
@@ -499,6 +499,7 @@ h4 {
     line-height: .9;
     padding-top: .08em;
     max-width: 95%;
+    font-size: 50px;
 }
 
 .program-card p {
@@ -831,6 +832,25 @@ h4 {
     .footer-top {
         grid-template-columns: 1fr 1fr;
     }
+    .hero-grid {
+        gap: 35px;
+    }
+
+    .open-house-carousel {
+        max-width: 100%;
+        min-height: 205px;
+    }
+
+    .gallery-grid {
+        grid-template-rows: 300px 200px;
+    }
+
+    .gallery-1 {
+        grid-row: 1 / 2;
+    }
+    .scroll-navigator {
+        display: none;
+    }
 }
 
 @media (max-width: 600px) {
@@ -839,6 +859,10 @@ h4 {
     .section-dark {
         padding-top: 85px;
         padding-bottom: 85px;
+    }
+
+    .transition-pixels {
+        display: none;
     }
 
     .hero {
@@ -877,6 +901,131 @@ h4 {
 
     .footer-bottom h2 {
         font-size: 60px;
+    }
+    .hero-grid {
+        gap: 28px;
+    }
+
+    .hero {
+        height: 100vh;
+    }
+
+    .open-house-carousel {
+        min-height: 210px;
+        padding: 21px;
+    }
+
+    .oh-slide h3 {
+        font-size: 57px;
+        line-height: .8;
+    }
+
+    .oh-date strong {
+        font-size: 35px;
+    }
+
+    .gallery-grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: 280px 200px 200px;
+    }
+
+    .gallery-1 {
+        grid-row: auto;
+    }
+
+    .gallery-4 {
+        display: block;
+    }
+
+    .hero h1,
+    .section-heading h2,
+    .schools h2,
+    .news-heading h2,
+    .gallery-heading h2,
+    .footer-bottom h2 {
+        line-height: .9;
+    }
+    .section-transition {
+        display: flex;
+        align-items: center;
+    }
+
+    .transition-track span {
+        font-size: 47px;
+    }
+
+    .hero h1,
+    .section-heading h2,
+    .schools h2,
+    .news-heading h2,
+    .gallery-heading h2,
+    .footer-bottom h2 {
+        line-height: .94;
+        padding-top: .16em;
+        padding-bottom: .08em;
+    }
+    .schools h2 span {
+        line-height: .94;
+        padding-top: .1em;
+    }
+    .arrow-icon-lg {
+        width: 34px;
+        height: 34px;
+    }
+
+    .heading-arrow .arrow-icon {
+        min-width: 28px;
+        min-height: 28px;
+    }
+
+    .image-corner {
+        font-size: 21px;
+    }
+
+    .image-corner-tl {
+        top: 14px;
+        left: 14px;
+    }
+
+    .image-corner-br {
+        right: 14px;
+        bottom: 14px;
+    }
+
+    .transition-green,
+    .transition-cyan {
+        min-height: 130px;
+    }
+
+    .schools h2 span {
+        line-height: .94;
+    }
+    .arrow-icon-lg {
+        width: 34px;
+        height: 34px;
+    }
+
+    .heading-arrow .arrow-icon {
+        min-width: 28px;
+        min-height: 28px;
+    }
+
+    .image-corner {
+        font-size: 21px;
+    }
+
+    .image-corner-tl {
+        top: 14px;
+        left: 14px;
+    }
+
+    .image-corner-br {
+        right: 14px;
+        bottom: 14px;
+    }
+
+    .program-card h3 {
+        font-size: 40px;
     }
 }
 
@@ -1258,72 +1407,6 @@ h4 {
         max-width: 650px;
     }
 }
-
-@media (max-width:900px) {
-    .hero-grid {
-        gap: 35px;
-    }
-
-    .open-house-carousel {
-        max-width: 100%;
-        min-height: 205px;
-    }
-
-    .gallery-grid {
-        grid-template-rows: 300px 200px;
-    }
-
-    .gallery-1 {
-        grid-row: 1 / 2;
-    }
-}
-
-@media (max-width:600px) {
-    .hero-grid {
-        gap: 28px;
-    }
-
-    .hero {
-        height: 100vh;
-    }
-
-    .open-house-carousel {
-        min-height: 210px;
-        padding: 21px;
-    }
-
-    .oh-slide h3 {
-        font-size: 57px;
-        line-height: .8;
-    }
-
-    .oh-date strong {
-        font-size: 35px;
-    }
-
-    .gallery-grid {
-        grid-template-columns: 1fr;
-        grid-template-rows: 280px 200px 200px;
-    }
-
-    .gallery-1 {
-        grid-row: auto;
-    }
-
-    .gallery-4 {
-        display: block;
-    }
-
-    .hero h1,
-    .section-heading h2,
-    .schools h2,
-    .news-heading h2,
-    .gallery-heading h2,
-    .footer-bottom h2 {
-        line-height: .9;
-    }
-}
-
 .ticker {
     width: 100%;
     overflow: hidden;
@@ -1425,14 +1508,6 @@ h4 {
     animation-delay: -1.7s;
 }
 
-.transition-pixels i:nth-child(4) {
-    right: 7%;
-    bottom: 23%;
-    width: 18px;
-    height: 18px;
-    animation-delay: -2.5s;
-}
-
 @keyframes pixel-float {
 
     0%,
@@ -1510,28 +1585,6 @@ h4 {
     }
 }
 
-@media (max-width: 600px) {
-    .section-transition {
-        display: flex;
-        align-items: center;
-    }
-
-    .transition-track span {
-        font-size: 47px;
-    }
-
-    .hero h1,
-    .section-heading h2,
-    .schools h2,
-    .news-heading h2,
-    .gallery-heading h2,
-    .footer-bottom h2 {
-        line-height: .94;
-        padding-top: .16em;
-        padding-bottom: .08em;
-    }
-}
-
 /*  Svenska bokstaver utryme mellan linje   */
 .schools h2 span,
 .hero h1 span,
@@ -1573,13 +1626,6 @@ h4 {
 .transition-green .transition-pixels i:nth-child(3),
 .transition-cyan .transition-pixels i:nth-child(3) {
     border-color: var(--cyan);
-}
-
-@media (max-width: 600px) {
-    .schools h2 span {
-        line-height: .94;
-        padding-top: .1em;
-    }
 }
 
 .scroll-rail {
@@ -1951,47 +1997,6 @@ body {
     }
 }
 
-@media (max-width: 900px) {
-    .scroll-navigator {
-        display: none;
-    }
-}
-
-@media (max-width: 600px) {
-    .arrow-icon-lg {
-        width: 34px;
-        height: 34px;
-    }
-
-    .heading-arrow .arrow-icon {
-        min-width: 28px;
-        min-height: 28px;
-    }
-
-    .image-corner {
-        font-size: 21px;
-    }
-
-    .image-corner-tl {
-        top: 14px;
-        left: 14px;
-    }
-
-    .image-corner-br {
-        right: 14px;
-        bottom: 14px;
-    }
-
-    .transition-green,
-    .transition-cyan {
-        min-height: 130px;
-    }
-
-    .schools h2 span {
-        line-height: .94;
-    }
-}
-
 @media (prefers-reduced-motion: reduce) {
 
     *,
@@ -2017,38 +2022,6 @@ body {
 
     .scroll-dot-label {
         left: 19px;
-    }
-}
-
-@media (max-width: 900px) {
-    .scroll-navigator {
-        display: none;
-    }
-}
-
-@media (max-width: 600px) {
-    .arrow-icon-lg {
-        width: 34px;
-        height: 34px;
-    }
-
-    .heading-arrow .arrow-icon {
-        min-width: 28px;
-        min-height: 28px;
-    }
-
-    .image-corner {
-        font-size: 21px;
-    }
-
-    .image-corner-tl {
-        top: 14px;
-        left: 14px;
-    }
-
-    .image-corner-br {
-        right: 14px;
-        bottom: 14px;
     }
 }
 

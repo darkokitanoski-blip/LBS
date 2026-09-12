@@ -32,7 +32,7 @@ export default function Programs() {
               <ArrowIcon direction="upRight" size="sm" />
             </div>
             <div>
-              <h3 style={{fontSize: "50px"}}>{program.title}</h3>
+              <h3>{program.title}</h3>
               <p >{program.desc}</p>
               <b>Program:</b> <span>{program.programtitle}</span>
               <br />
