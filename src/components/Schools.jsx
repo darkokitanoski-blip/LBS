@@ -2,7 +2,7 @@ import ArrowIcon from "./ArrowIcon.jsx";
 const schools = [
   "Göteborg", "Borås", "Halmstad", "Helsingborg", "Jönköping",
   "Kristianstad", "Kungsbacka", "Linköping", "Malmö", "Nyköping",
-  "Stockholm Norra", "Stockholm Södra", "Trollhättan", "Varberg", "Växjö", "Örebro"
+  "Stockholm Norra", "Stockholm Södra", "Trollhättan", "Växjö", "Örebro", "Kommer mer i framtid..."
 ];
 
 

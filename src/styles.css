@@ -118,7 +118,7 @@ a {
     background-color: var(--yellow);
     bottom: -2px;
     width: 0%;
-    height: 1px;
+    height: 2px;
     left: 0;
     transition: width .3s ease;
 }
@@ -132,13 +132,22 @@ a {
     height: 2px;
 }
 
+.nav a:nth-child(5):hover::after {
+    content: "";
+    position: absolute;
+    background-color: var(--yellow);
+    width: 0%;
+    bottom: -2px;
+    height: 2px;
+}
+
 .nav a:nth-child(5) {
     transition: .5s ease;
     border: 1px solid var(--yellow);
 }
 
 .nav a:hover {
-    opacity: .7;
+    opacity: .75;
 }
 
 .nav a:nth-child(5):hover {
@@ -435,7 +444,19 @@ h4 {
     justify-content: space-between;
     color: var(--black);
     transition: transform .25s ease;
+    clip-path: polygon(
+        0 10%,       /* left side starts lower */
+        14% 10%,
+        14% 0,
+        76% 0,       /* top edge */
+        76% 7%,
+        100% 7%,     /* right cut is different */
+        100% 100%,
+        0 100%
+    );  
+    cursor: pointer;
 }
+
 
 .program-card:hover {
     transform: translateY(-8px);
@@ -468,6 +489,7 @@ h4 {
 
 .card-top {
     display: flex;
+    margin-top: 3vh;
     justify-content: space-between;
     font: 500 11px "IBM Plex Mono", monospace;
 }
@@ -487,13 +509,12 @@ h4 {
 
 .card-pixel {
     position: absolute;
-    width: 150px;
-    height: 150px;
-    right: -25px;
-    bottom: -25px;
-    border: 2px solid currentColor;
+    width: 120px;
+    height: 120px;
+    right: -2px;
+    bottom: -5px;
     opacity: .25;
-    clip-path: polygon(0 0, 70% 0, 70% 30%, 100% 30%, 100% 100%, 0 100%);
+
 }
 
 .news {
@@ -510,9 +531,6 @@ h4 {
     white-space: nowrap;
     padding: 9px 0;
     font: 800 25px "Big Shoulders Text", sans-serif;
-}
-
-.ticker {
     position: relative;
 }
 
@@ -658,6 +676,22 @@ h4 {
     transition: color .2s ease, padding .2s ease;
 }
 
+.school-list a:nth-child(16) {
+    opacity: 0.5;
+        border-bottom: 0px solid rgba(0, 230, 118, .35);
+    transition: none;
+}
+
+.school-list a:nth-child(16) svg {
+    display: none;
+}
+
+.school-list a:nth-child(16):hover {
+    padding-left: 0px;
+        color: white;
+        cursor:default;
+    
+}
 .school-list a:hover {
     color: var(--green);
     padding-left: 7px;
