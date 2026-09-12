@@ -866,7 +866,8 @@ h4 {
     }
 
     .hero {
-        min-height: 680px;
+        min-height: 860px;
+        height: 100vh;
     }
 
     .hero-copy {
@@ -906,9 +907,6 @@ h4 {
         gap: 28px;
     }
 
-    .hero {
-        height: 100vh;
-    }
 
     .open-house-carousel {
         min-height: 210px;
