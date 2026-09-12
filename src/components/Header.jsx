@@ -28,7 +28,7 @@ export default function Header() {
         aria-label="Öppna meny"
         aria-expanded={open}
       >
-        <span>[</span><span>MENU</span><span>]</span>
+        <span>[</span><span>MENY</span><span>]</span>
       </button>
 
       <nav className={`nav ${open ? "nav-open" : ""}`}>
