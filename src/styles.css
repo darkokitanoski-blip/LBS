@@ -631,15 +631,6 @@ h4 {
     font: 500 10px "IBM Plex Mono", monospace;
 }
 
-.news-more {
-    display: block;
-    text-align: center;
-    background: var(--magenta);
-    color: var(--dark-magenta);
-    padding: 17px;
-    font: 800 34px "Big Shoulders Text", sans-serif;
-}
-
 .schools {
     background: var(--dark-green);
     color: var(--white);
@@ -857,6 +848,18 @@ h4 {
     }
 }
 
+@media (max-width: 400px) {
+    h2,.schools h2 span {
+        font-size: 50px !important;
+    }
+    h3 {
+        font-size: 30px !important;
+    }
+    h1 {
+        font-size: 60px !important;
+    }
+}
+
 @media (max-width: 600px) {
 
     .section,
@@ -872,6 +875,9 @@ h4 {
     .transition-pixels {
         display: none;
     }
+    .news-more {
+        margin-top: 55px;
+    }
 
     .hero {
         min-height: 860px;
@@ -885,6 +891,7 @@ h4 {
     .program-grid,
     .news-grid {
         grid-template-columns: 1fr;
+        padding: 2%;
     }
 
     .program-card {
@@ -901,6 +908,8 @@ h4 {
 
     .school-list {
         grid-template-columns: 1fr;
+        position: relative;
+
     }
 
     .footer-top {
@@ -1922,10 +1931,12 @@ body {
 }
 
 .news-more {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 18px;
+    display: block;
+    text-align: center;
+    background: var(--magenta);
+    color: var(--dark-magenta);
+    padding: 17px;
+    font: 800 34px "Big Shoulders Text", sans-serif;
 }
 
 .news-more .arrow-icon {
