@@ -48,17 +48,19 @@ a {
 }
 
 .header {
-    position: absolute;
+    position: fixed;
     z-index: 20;
     top: 0;
     left: 50%;
     transform: translateX(-50%);
-    width: min(100% - 48px, var(--max));
+    width: 100%;
+    padding: 0% 0%;
     height: 88px;
     display: flex;
     align-items: center;
     justify-content: space-between;
     backdrop-filter: blur(12px);
+    transition: 500ms;
     border-bottom: 1px solid rgba(255, 255, 255, .18);
 }
 
@@ -748,7 +750,9 @@ h4 {
 
 @media (max-width: 900px) {
     .header {
-        width: calc(100% - 30px);
+        width: 100%;
+        padding-left: 5%;
+        padding-right: 5%;
         height: 72px;
     }
 
