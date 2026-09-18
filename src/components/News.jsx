@@ -1,7 +1,17 @@
 import ArrowIcon from "./ArrowIcon.jsx";
 import SectionTransition from "./SectionTransition.jsx";
+import * as React from "react"
 
-  // komponent där jag skapr Nyhet sektion för sidan, och jag implementa ikon komponent och SectionTransition komponent för att göra carousel typ av funktionallitet 
+import { Card, CardContent } from "../components/ui/card"
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "../components/ui/carousel"
+
+// komponent där jag skapr Nyhet sektion för sidan, och jag implementa ikon komponent och SectionTransition komponent för att göra carousel typ av funktionallitet 
 const news = [
   {
     date: "30 APRIL 2024",
@@ -69,6 +79,42 @@ export default function News() {
           </article>
         ))}
       </div>
+
+      <Carousel opts={{
+        loop: true,
+      }} className="carousel-news-mobile-port w-full max-w-[100%]">
+        <CarouselContent>
+          {news.map((item) => (
+            <CarouselItem key={item.title}>
+              <article className="news-card">
+
+                <div className="news-image pixel-frame">
+                  <div className="news-image-inner">
+                    <span>[ IMAGE ]</span>
+                  </div>
+                </div>
+
+                <div className="news-content">
+                  <span className="meta">[ {item.date} ]</span>
+                  <span className="meta">{item.type}</span>
+
+                  <h3>{item.title}</h3>
+
+                  <p>{item.text}</p>
+
+                  <a href="#news">
+                    LÄS MER <ArrowIcon size="sm" />
+                  </a>
+                </div>
+
+              </article>
+            </CarouselItem>
+          ))}
+        </CarouselContent>
+
+        <CarouselPrevious />
+        <CarouselNext />
+      </Carousel>
 
       <a className="news-more" href="#news">
         SE ALLA NYHETER <ArrowIcon size="md" />
