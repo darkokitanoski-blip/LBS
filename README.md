@@ -25,7 +25,7 @@ npm run dev
 * Typografi och radavstånd anpassade för svenska tecken
 
 ## QR-kod för tillgång till websidan
-<img src="./public/QRkod.svg" alt="QR-kod för webbplatsen" width="300">
+<img src="./public/qr-code.png" alt="QR-kod för webbplatsen" width="300">
 
 ## Lägg till riktiga bilder
 

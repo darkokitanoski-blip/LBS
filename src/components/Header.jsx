@@ -5,10 +5,10 @@ import ArrowIcon from "./ArrowIcon.jsx";
 // här okcså gör jag animationen för header när man scrollar.
 
 const navItems = [
-  ["Våra skolor", "#schools"],
   ["Om oss", "#about"],
-  ["Kontakta oss", "#contact"],
   ["Våra program", "#programs"],
+  ["Våra skolor", "#schools"],
+  ["Kontakta oss", "#contact"]
 ];
 
 export default function Header() {
