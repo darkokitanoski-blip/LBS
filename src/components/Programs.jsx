@@ -9,7 +9,7 @@ import ImagePlaceholder from "./ImagePlaceholder.jsx";
 const programs = [
   {
     title: <><span>SPEL</span><span>UTVECKLING</span></>,
-    src: "public/k9OGU1J3yEkbYHcp0MEfwTulRhiwZDgMBtSY0n0G.jpg",
+    src: "/k9OGU1J3yEkbYHcp0MEfwTulRhiwZDgMBtSY0n0G.jpg",
     icon: <IoGameController className="card-pixel" />,
     desc: "Spelutveckling, spelgrafik och digitala upplevelser; djupdyka i spelprogrammering.",
     programtitle: "Teknikprogrammet",
@@ -18,7 +18,7 @@ const programs = [
   },
   {
     title: <><span>GRAFISK</span><span>DESIGN</span></>,
-    src: "public/64634450ff050318e95e473e_AdobeStock_317223249.webp",
+    src: "/64634450ff050318e95e473e_AdobeStock_317223249.webp",
     icon: <MdDesignServices className="card-pixel" />,
     desc: "Visuell kommunikation, form och kreativt skapande.",
     programtitle: "Estetiska programmet",
@@ -27,7 +27,7 @@ const programs = [
   },
   {
     title: <><span>AI &</span><span>WEBUTVECKLING</span></>,
-    src: "public/photo-1593720219276-0b1eacd0aef4.jpg",
+    src: "/photo-1593720219276-0b1eacd0aef4.jpg",
     icon: <FaCode className="card-pixel" />,
     desc: "Teknikutbildning som kombinerar programmering och webbutveckling med AI.",
     programtitle: "Teknikprogrammet",

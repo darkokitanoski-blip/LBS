@@ -1308,6 +1308,9 @@ h4 {
 
 }
 
+.program-card > .intro-visual {
+    margin-left: 25px;
+}
 
 
 .carousel-news-mobile-port button:active {
