@@ -1,5 +1,9 @@
 import { useEffect, useState } from "react";
 import ArrowIcon from "./ArrowIcon.jsx";
+import { GiHamburgerMenu } from "react-icons/gi";
+import { IoCloseSharp } from "react-icons/io5";
+
+
 
 // komponent där jag skapar Header för sidan, och jag implementerar ikon-komponenten och använder useState från React-biblioteket; 
 // här okcså gör jag animationen för header när man scrollar.
@@ -47,7 +51,7 @@ export default function Header() {
   return (
     <header
       className="header"
-      style={{ top: scrollDirection === "down" ? "-40%" : "0%", backgroundColor: Transparent, width: Width, padding: Padding }}
+      style={{ top: scrollDirection === "down" ? "-50%" : "0%", backgroundColor: Transparent, width: Width, padding: Padding }}
     >
       <a className="brand" href="#" aria-label="LBS Kreativa Gymnasiet">
         <span className="brand-box">
@@ -56,13 +60,20 @@ export default function Header() {
 
       </a>
 
+
       <button
         className="menu-button"
         onClick={() => setOpen(!open)}
-        aria-label="Öppna meny"
+        aria-label={open ? "Stäng meny" : "Öppna meny"}
         aria-expanded={open}
       >
-        <span>[</span><span>MENY</span><span>]</span>
+        <span>[</span>
+
+        <span className={`menu-icon ${open ? "menu-icon-open" : ""}`}>
+          {open ? <IoCloseSharp /> : <GiHamburgerMenu />}
+        </span>
+
+        <span>]</span>
       </button>
 
       <nav className={`nav ${open ? "nav-open" : ""}`}>
