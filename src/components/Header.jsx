@@ -82,7 +82,7 @@ export default function Header() {
             {label}
           </a>
         ))}
-        <a className="nav-cta" href="#open-house" onClick={() => setOpen(false)}>
+        <a className="nav-cta" href="/openhouse" onClick={() => setOpen(false)}>
           ÖPPET HUS <ArrowIcon size="sm" />
         </a>
       </nav>

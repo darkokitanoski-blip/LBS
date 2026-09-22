@@ -60,7 +60,7 @@ export default function News() {
 
       <div className="news-grid">
         {news.map((item) => (
-          <article className="news-card" key={item.title}>
+          <article className="news-card" key={item.title} onClick={() => window.location.href = `/news/${item.title}`}>
             <div className="news-image pixel-frame">
               <div className="news-image-inner">
                 <span>[ IMAGE ]</span>
@@ -86,7 +86,7 @@ export default function News() {
         <CarouselContent>
           {news.map((item) => (
             <CarouselItem key={item.title}>
-              <article className="news-card">
+              <article className="news-card" onClick={() => window.location.href = `/news/${item.title}`}>
 
                 <div className="news-image pixel-frame">
                   <div className="news-image-inner">

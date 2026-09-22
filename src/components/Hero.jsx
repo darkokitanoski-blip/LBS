@@ -7,6 +7,7 @@ import { FaCode } from "react-icons/fa";
 import { RiGame2Fill } from "react-icons/ri";
 import { PiFilmSlateFill } from "react-icons/pi";
 import { IoMusicalNotesSharp } from "react-icons/io5";
+import { Link } from "react-router-dom";
 // komponent där jag skapar Hero för sidan alltså där vikitgast finns, och jag implementa ikon komonent och också använder useState och UseEffect från Reacts library
 const openHouseSlides = [
   { date: "TORSDAG 22 OKTOBER", time: "17:00", title: "ÖPPET HUS", text: "Kom och upptäck våra utbildningar, lokaler och kreativa miljöer." },
@@ -124,7 +125,9 @@ export default function Hero() {
             <a className="button button-outline-light" href="#schools">HÄR FINNS VI <ArrowIcon size="sm" /></a>
           </div>
         </div>
+        <Link to="/openhouse">
         <OpenHouseCarousel />
+        </Link>
       </div>
       <div className="hero-bottom"></div>
     </section>
