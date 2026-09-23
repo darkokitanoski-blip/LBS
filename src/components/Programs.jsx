@@ -83,7 +83,7 @@ export default function Programs() {
       <div className="program-grid">
         {programs.map((program, index) => (
 
-          <article className={`program-card ${program.color}`} key={program.title} onClick={() => {window.location.href = program.link}}>
+          <article className={`program-card ${program.color}`} key={program.src} onClick={() => {window.location.href = program.link}}>
             <div className="card-top">
               <span>0{index + 1}</span>
               <ArrowIcon direction="upRight" size="sm" />

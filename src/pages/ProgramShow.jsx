@@ -1,6 +1,6 @@
 
 
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import Footer from "../components/Footer";
 import News from "../components/News";
 import { useParams } from "react-router-dom";
@@ -517,6 +517,17 @@ export default function ProgramShow({
       });
   };
 
+  const [fixed, setFixed] = useState("absolute")
+
+  window.addEventListener("scroll", (e) => {
+    console.log(window.scrollY)
+    if (window.scrollY < 799 || window.scrollY > 4550) {
+      setFixed("absolute")
+    } else {
+      setFixed("fixed")
+    }
+  })
+
   return (
     <main
       ref={pageRef}
@@ -530,13 +541,10 @@ export default function ProgramShow({
       
       `}</style>
 
-      {/* ==================== HERO ==================== */}
-
       <section className="program-show__hero" id="top">
         <div
-          className={`program-show__hero-image ${
-            data.src ? "has-image" : ""
-          }`}
+          className={`program-show__hero-image ${data.src ? "has-image" : ""
+            }`}
           style={{
             "--program-image": data.src
               ? `url("${data.src}")`
@@ -600,59 +608,57 @@ export default function ProgramShow({
         </div>
       </section>
 
-      {/* ==================== QUICK NAV ==================== */}
 
-      <nav className="program-show__quick-nav">
-        <div className="program-show__container program-show__quick-nav-inner">
-          <span className="program-show__quick-label">
-            {data.title}
-          </span>
-
-          <div className="program-show__quick-links">
-            <button
-              className="program-show__quick-link"
-              onClick={() => scrollTo("om")}
-            >
-              OM PROGRAMMET
-            </button>
-
-            <button
-              className="program-show__quick-link"
-              onClick={() => scrollTo("innehall")}
-            >
-              INNEHÅLL
-            </button>
-
-            <button
-              className="program-show__quick-link"
-              onClick={() => scrollTo("projekt")}
-            >
-              PROJEKT
-            </button>
-
-            <button
-              className="program-show__quick-link"
-              onClick={() => scrollTo("kurser")}
-            >
-              KURSER
-            </button>
-
-            <button
-              className="program-show__quick-link"
-              onClick={() => scrollTo("framtid")}
-            >
-              EFTER GYMNASIET
-            </button>
-          </div>
-        </div>
-      </nav>
-
-      {/* ==================== ABOUT ==================== */}
 
       <section
         className="program-show__section"
         id="om"
       >
+
+        <nav className="program-show__quick-nav " style={{ position: fixed }}>
+          <div className="program-show__container program-show__quick-nav-inner">
+            <span className="program-show__quick-label">
+              {data.title}
+            </span>
+
+            <div className="program-show__quick-links">
+              <button
+                className="program-show__quick-link"
+                onClick={() => scrollTo("om")}
+              >
+                OM PROGRAMMET
+              </button>
+
+              <button
+                className="program-show__quick-link"
+                onClick={() => scrollTo("innehall")}
+              >
+                INNEHÅLL
+              </button>
+
+              <button
+                className="program-show__quick-link"
+                onClick={() => scrollTo("projekt")}
+              >
+                PROJEKT
+              </button>
+
+              <button
+                className="program-show__quick-link"
+                onClick={() => scrollTo("kurser")}
+              >
+                KURSER
+              </button>
+
+              <button
+                className="program-show__quick-link"
+                onClick={() => scrollTo("framtid")}
+              >
+                EFTER GYMNASIET
+              </button>
+            </div>
+          </div>
+        </nav>
         <div className="program-show__container">
           <div
             className="program-show__section-heading"
@@ -701,8 +707,6 @@ export default function ProgramShow({
         </div>
       </section>
 
-      {/* ==================== PROJECTS ==================== */}
-
       <section
         className="program-show__projects"
         id="projekt"
@@ -746,8 +750,6 @@ export default function ProgramShow({
           </ul>
         </div>
       </section>
-
-      {/* ==================== COURSES ==================== */}
 
       <section
         className="program-show__section program-show__section--grey"

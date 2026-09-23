@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from "react";
+import { useParams } from "react-router-dom";
 import Footer from "../components/Footer";
 
 const defaultArticle = {
@@ -82,6 +83,7 @@ function ArticleBody({ body }) {
   );
 }
 
+
 export default function NewsArticle({
   article = defaultArticle,
   onBack,
@@ -90,7 +92,6 @@ export default function NewsArticle({
 }) {
   const [progress, setProgress] = useState(0);
   const pageRef = useRef(null);
-
   const data = {
     ...defaultArticle,
     ...article,
@@ -98,7 +99,8 @@ export default function NewsArticle({
     tags: article?.tags || [],
     related: article?.related || []
   };
-
+  const urlname = useParams()
+  const title = urlname.slug
   useEffect(() => {
     const updateProgress = () => {
       const documentHeight =
@@ -183,7 +185,7 @@ export default function NewsArticle({
             <span>{data.readTime}</span>
           </div>
 
-          <h1 className="news-article__title">{data.title}</h1>
+          <h1 className="news-article__title">{title}</h1>
 
           <p className="news-article__intro">{data.excerpt}</p>
 
@@ -257,7 +259,7 @@ export default function NewsArticle({
           </div>
         </section>
       )}
-                  <Footer></Footer>
+      <Footer></Footer>
     </main>
   );
 }

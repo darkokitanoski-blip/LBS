@@ -58,13 +58,9 @@ function OpenHouseCarousel() {
           <p>{slide.text}</p>
         </div>
 
-        <a
-          href="#contact"
-          className="oh-arrow"
-          aria-label="Läs mer"
-        >
-          <ArrowIcon direction="upRight" size="lg" />
-        </a>
+        <ArrowIcon direction="upRight" size="lg" />
+
+
       </div>
 
     </div>
@@ -125,9 +121,10 @@ export default function Hero() {
             <a className="button button-outline-light" href="#schools">HÄR FINNS VI <ArrowIcon size="sm" /></a>
           </div>
         </div>
-        <Link to="/openhouse">
-        <OpenHouseCarousel />
-        </Link>
+        <a href="#openhouse">        
+          <OpenHouseCarousel />
+        </a>
+
       </div>
       <div className="hero-bottom"></div>
     </section>
