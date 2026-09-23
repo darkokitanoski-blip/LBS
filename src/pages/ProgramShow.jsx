@@ -521,7 +521,7 @@ export default function ProgramShow({
 
   window.addEventListener("scroll", (e) => {
     console.log(window.scrollY)
-    if (window.scrollY < 799 || window.scrollY > 4550) {
+    if (window.scrollY < 799 || window.scrollY > 4350) {
       setFixed("absolute")
     } else {
       setFixed("fixed")
@@ -577,14 +577,6 @@ export default function ProgramShow({
             <p className="program-show__intro">{data.intro}</p>
 
             <div className="program-show__hero-bottom">
-              <div className="program-show__hero-info">
-                <span className="program-show__hero-info-label">
-                  Skola
-                </span>
-                <span className="program-show__hero-info-value">
-                  LBS Kreativa Gymnasiet Lund
-                </span>
-              </div>
 
               <div className="program-show__hero-info">
                 <span className="program-show__hero-info-label">

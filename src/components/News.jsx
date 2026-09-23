@@ -1,6 +1,7 @@
 import ArrowIcon from "./ArrowIcon.jsx";
 import SectionTransition from "./SectionTransition.jsx";
 import * as React from "react"
+import ImagePlaceholder from "./ImagePlaceholder.jsx";
 
 import { Card, CardContent } from "../components/ui/card"
 import {
@@ -14,22 +15,25 @@ import {
 // komponent där jag skapr Nyhet sektion för sidan, och jag implementa ikon komponent och SectionTransition komponent för att göra carousel typ av funktionallitet 
 const news = [
   {
-    date: "30 APRIL 2024",
-    type: "ALUMN",
-    title: "BÖRJADE ARBETA DIREKT",
-    text: "Från gymnasiet till den kreativa branschen – upptäck vad tidigare elever gör idag."
+    date: "12 mars 2026",
+    type: "ELEVINTERVJU",
+    title: "Från LBS till eget växande företag ",
+    src: "https://lbs.se/wp-content/uploads/2026/03/lbsalumnnathalie-andersson2026-600x669.jpg",
+    text: "”Idag driver jag eget företag där jag jobbar med content creation, sociala medier och skapar film åt företag, samtidigt som jag bygger mitt eget varumärke på TikTok där jag skapar högenergiskt, humoristiskt och kreativt innehåll.”"
   },
   {
-    date: "04 DEC 2024",
-    type: "NYHETER",
-    title: "EN FRAMTID I SPELBRANSCHEN",
-    text: "Spelbranschen växer och kreativa digitala kompetenser blir allt viktigare."
+    date: "7 maj 2026",
+    type: "ELEVINTERVJU",
+    title: "Från LBS till senior 3D-artist",
+    src: "https://lbs.se/wp-content/uploads/2026/05/profilbild-ny-1-600x490.jpg",
+    text: "Från spelintresserad gymnasieelev till senior 3D-artist inom bilindustrin. Sebastian Ladan har genom passion och hårt arbete byggt en karriär inom 3D-visualisering. Idag arbetar han med projekt för bland annat Polestar och Volvo."
   },
   {
-    date: "29 APRIL 2024",
-    type: "NYHETER",
-    title: "UPPTÄCK MÖJLIGHETERNA",
-    text: "Fem exempel på hur LBS skapar möjligheter för din framtid."
+    date: "30 april 2024",
+    type: "ELEVINTERVJU",
+    title: "Började arbeta som Grafisk Design",
+    src: "https://lbs.se/wp-content/uploads/2024/04/simon-bjorck-scaled-e1714466605822-600x591.jpeg",
+    text: "Simon Björck tog studenten från LBS Helsingborg 2019 och jobbade därefter tre år som grafisk designer på Ninjas in Pyjamas. Efter att ha gjort uppdrag från NIP under gymnasietiden fick han jobb där nästan direkt och blev sedan..."
   }
 ];
 
@@ -62,8 +66,15 @@ export default function News() {
         {news.map((item) => (
           <article className="news-card" key={item.title} onClick={() => window.location.href = `/news/${item.title}`}>
             <div className="news-image pixel-frame">
-              <div className="news-image-inner">
-                <span>[ IMAGE ]</span>
+              <div className="news-image-inner" style={{
+                width: "100%",
+                height: "100%",
+                backgroundImage: `url(${item.src})`,
+                backgroundSize: "cover",
+                backgroundPosition: "center",
+                backgroundRepeat: "no-repeat",
+                transition: "transform 0.4s ease",
+              }}>
               </div>
             </div>
 
@@ -72,7 +83,7 @@ export default function News() {
               <span className="meta">{item.type}</span>
               <h3>{item.title}</h3>
               <p>{item.text}</p>
-              <a href="#news">
+              <a href="#news" className="absolute bottom-6 flex items-center">
                 LÄS MER <ArrowIcon size="sm" />
               </a>
             </div>
@@ -89,8 +100,15 @@ export default function News() {
               <article className="news-card" onClick={() => window.location.href = `/news/${item.title}`}>
 
                 <div className="news-image pixel-frame">
-                  <div className="news-image-inner">
-                    <span>[ IMAGE ]</span>
+                  <div className="news-image-inner" style={{
+                    width: "100%",
+                    height: "100%",
+                    backgroundImage: `url(${item.src})`,
+                    backgroundSize: "cover",
+                    backgroundPosition: "center",
+                    backgroundRepeat: "no-repeat",
+                    transition: "transform 0.4s ease",
+                  }}>
                   </div>
                 </div>
 
@@ -102,7 +120,7 @@ export default function News() {
 
                   <p>{item.text}</p>
 
-                  <a href="#news">
+                  <a href="#news" className="absolute bottom-6 flex items-center">
                     LÄS MER <ArrowIcon size="sm" />
                   </a>
                 </div>
