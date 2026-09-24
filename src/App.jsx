@@ -18,7 +18,7 @@ export default function App() {
 
   useEffect(() => {
     const urlget = window.location.href
-    if (urlget === "https://lbs-wine-rho.vercel.app/") {
+    if (urlget === "https://lbs-wine-rho.vercel.app/" || urlget ===  "http://localhost:5173/") {
       return;
     } else {
       window.location.href = urlget

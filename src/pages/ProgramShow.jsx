@@ -307,7 +307,7 @@ const programs = {
   fotofilm: {
     title: (
       <>
-        <span>FOTO &</span>
+        <span>FOTO & </span>
         <span>FILM</span>
       </>
     ),
@@ -657,7 +657,7 @@ export default function ProgramShow({
             data-reveal
           >
             <div className="program-show__section-number">
-              01 / OM PROGRAMMET
+              [ OM PROGRAMMET ]
             </div>
 
             <div>
@@ -715,7 +715,7 @@ export default function ProgramShow({
           data-reveal="right"
         >
           <div className="program-show__section-number">
-            02 / PRAKTISKT SKAPANDE
+            [ PRAKTISKT SKAPANDE ]
           </div>
 
           <h2 className="program-show__heading">
@@ -753,7 +753,7 @@ export default function ProgramShow({
             data-reveal
           >
             <div className="program-show__section-number">
-              03 / KURSER
+              [ KURSER ] 
             </div>
 
             <div>
@@ -799,8 +799,6 @@ export default function ProgramShow({
         </div>
       </section>
 
-      {/* ==================== FUTURE ==================== */}
-
       <section
         className="program-show__section program-show__future"
         id="framtid"
@@ -811,7 +809,7 @@ export default function ProgramShow({
             data-reveal
           >
             <div className="program-show__section-number">
-              04 / EFTER GYMNASIET
+              [ EFTER GYMNASIET ]
             </div>
 
             <div>

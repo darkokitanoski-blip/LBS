@@ -2298,7 +2298,13 @@ h4 {
     }
 
     h1 {
-        font-size: 60px !important;
+        font-size: 50px !important;
+    }
+
+    .program-show__title {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
     }
 }
 
@@ -3795,14 +3801,16 @@ body {
     gap: 10px;
 
     padding: 0;
-
-    background: none;
-    color: rgba(255, 255, 255, .7);
+/* 
+    background: none; */
+    color: rgb(0, 0, 0);
 
     font-family: "IBM Plex Mono", monospace;
     font-size: 10px;
     text-transform: uppercase;
     letter-spacing: .08em;
+    border: black 1px solid;
+    padding: 5px;
 
     transition:
         color .2s ease,
