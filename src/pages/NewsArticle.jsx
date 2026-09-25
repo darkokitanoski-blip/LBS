@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { useParams } from "react-router-dom";
 import Footer from "../components/Footer";
+import SectionTransition from "../components/SectionTransition";
 
 const defaultArticle = {
   ["Började arbeta som Grafisk Design"]: {
@@ -224,6 +225,7 @@ export default function NewsArticle({
           </div>
         </section>
       )}
+      <SectionTransition variant="magenta"></SectionTransition>
       <Footer></Footer>
     </main>
   );

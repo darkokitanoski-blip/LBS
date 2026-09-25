@@ -118,7 +118,7 @@ export default function Hero() {
           <p className="hero-copy">Gymnasieutbildningar för dig som vill skapa utifrån dina idéer och utvecklas inom dagens kreativa branscher.</p>
           <div className="hero-actions">
             <a className="button button-light" href="#programs">VÅRA PROGRAM <ArrowIcon size="sm" /></a>
-            <a className="button button-outline-light" href="#schools">HÄR FINNS VI <ArrowIcon size="sm" /></a>
+            <a className="button button-outline-light" href="#form">ANMÄL DIG <ArrowIcon size="sm" /></a>
           </div>
         </div>
         <a href="#openhouse">        

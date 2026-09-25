@@ -5,7 +5,7 @@ import Programs from "./components/Programs.jsx";
 import CreativeGallery from "./components/CreativeGallery.jsx";
 import SectionTransition from "./components/SectionTransition.jsx";
 import News from "./components/News.jsx";
-import Schools from "./components/Schools.jsx";
+import Form from "./components/Form.jsx";
 import Footer from "./components/Footer.jsx";
 import OpenHouseInteractive from "./components/OpenHouseInteractive.jsx";
 import { useParams } from "react-router-dom";
@@ -18,7 +18,7 @@ export default function App() {
 
   useEffect(() => {
     const urlget = window.location.href
-    if (urlget === "https://lbs-wine-rho.vercel.app/" || urlget ===  "http://localhost:5173/") {
+    if (urlget === "https://lbs-wine-rho.vercel.app/" || urlget === "http://localhost:5173/") {
       return;
     } else {
       window.location.href = urlget
@@ -36,10 +36,12 @@ export default function App() {
         <Programs />
         <OpenHouseInteractive></OpenHouseInteractive>
         <CreativeGallery />
+        <SectionTransition variant="yellow" />
+        <Form></Form>
         <News />
-        <Schools />
         <SectionTransition variant="magenta" />
       </main>
+
       <Footer />
     </div>
   );

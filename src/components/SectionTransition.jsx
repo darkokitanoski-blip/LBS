@@ -8,7 +8,8 @@ const messages = [
 
 
   // komponent där jag skapar Carousel animation för all de delarna som behöer det i sidan, och jag implementa ikon komonent
-export default function SectionTransition({ variant = "green" }) {
+export default function SectionTransition({ variant }) {
+  console.log(variant)
   return (
     <section className={`section-transition transition-${variant}`} aria-hidden="true">
       <div className="transition-marquee">

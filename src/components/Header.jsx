@@ -11,7 +11,7 @@ import { IoCloseSharp } from "react-icons/io5";
 const navItems = [
   ["Om oss", "#about"],
   ["Våra program", "#programs"],
-  ["Våra skolor", "#schools"],
+  ["Anmäl dig", "#form"],
   ["Kontakta oss", "#contact"]
 ];
 

@@ -42,18 +42,18 @@ export default function News() {
     <section className="news section" id="news">
       <div className="ticker">
         <div className="ticker-track">
-          <span> ÖPPET HUS 19 NOV KL.18</span>
-          <span> ÖPPET HUS 19 NOV KL.18</span>
-          <span> ÖPPET HUS 19 NOV KL.18</span>
-          <span> ÖPPET HUS 19 NOV KL.18</span>
-          <span> ÖPPET HUS 19 NOV KL.18</span>
-          <span> ÖPPET HUS 19 NOV KL.18</span>
-          <span> ÖPPET HUS 19 NOV KL.18</span>
-          <span> ÖPPET HUS 19 NOV KL.18</span>
-          <span> ÖPPET HUS 19 NOV KL.18</span>
-          <span> ÖPPET HUS 19 NOV KL.18</span>
-          <span> ÖPPET HUS 19 NOV KL.18</span>
-          <span> ÖPPET HUS 19 NOV KL.18</span>
+          <span> NÄSTA ÖPPET HUS: 08 DEC KL.17</span>
+          <span> NÄSTA ÖPPET HUS: 08 DEC KL.17</span>
+          <span> NÄSTA ÖPPET HUS: 08 DEC KL.17</span>
+          <span> NÄSTA ÖPPET HUS: 08 DEC KL.17</span>
+          <span> NÄSTA ÖPPET HUS: 08 DEC KL.17</span>
+          <span> NÄSTA ÖPPET HUS: 08 DEC KL.17</span>
+          <span> NÄSTA ÖPPET HUS: 08 DEC KL.17</span>
+          <span> NÄSTA ÖPPET HUS: 08 DEC KL.17</span>
+          <span> NÄSTA ÖPPET HUS: 08 DEC KL.17</span>
+          <span> NÄSTA ÖPPET HUS: 08 DEC KL.17</span>
+          <span> NÄSTA ÖPPET HUS: 08 DEC KL.17</span>
+
         </div>
       </div>
 
@@ -133,10 +133,6 @@ export default function News() {
         <CarouselPrevious />
         <CarouselNext />
       </Carousel>
-
-      <a className="news-more" href="#news">
-        SE ALLA NYHETER <ArrowIcon size="md" />
-      </a>
 
     </section>
   );

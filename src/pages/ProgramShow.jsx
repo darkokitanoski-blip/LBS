@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import Footer from "../components/Footer";
+import SectionTransition from "../components/SectionTransition";
 import News from "../components/News";
 import { useParams } from "react-router-dom";
 import {
@@ -175,7 +176,7 @@ const programs = {
   aiwebutveckling: {
     title: (
       <>
-        <span>AI &</span>
+        <span>AI & </span>
         <span>WEBUTVECKLING</span>
       </>
     ),
@@ -753,7 +754,7 @@ export default function ProgramShow({
             data-reveal
           >
             <div className="program-show__section-number">
-              [ KURSER ] 
+              [ KURSER ]
             </div>
 
             <div>
@@ -849,8 +850,7 @@ export default function ProgramShow({
 
       <News></News>
 
-      {/* ==================== FOOTER ==================== */}
-
+        <SectionTransition variant="magenta" />
       <Footer></Footer>
     </main>
   );
