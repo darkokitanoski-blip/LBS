@@ -14,7 +14,7 @@ const Form = () => {
         const email = formData.get("email");
         const phone = formData.get("mobilePhoneNumber");
         const startYear = formData.get("startOfStudies-118922");
-
+        const subject = encodeURIComponent("Anmälan – Elev för en dag");
         const programValues = formData.getAll("progorgmappings");
 
         const programs = [];
@@ -33,36 +33,32 @@ const Form = () => {
             }
         });
 
-        const message = `
-            ANMÄLAN – ELEV FÖR EN DAG
 
-            KONTAKTUPPGIFTER
-            ────────────────────────
-            Förnamn: ${firstName}
-            Efternamn: ${lastName}
-            E-post: ${email}
-            Mobilnummer: ${phone}
+        const body = encodeURIComponent(`
+ANMÄLAN – ELEV FÖR EN DAG
 
-            PROGRAM
-            ────────────────────────
-            ${programs.length
-                            ? programs.map(program => `• ${program}`).join("\n")
-                            : "Inget program valt"
-                        }
+KONTAKTUPPGIFTER
+────────────────────────
+Förnamn: ${firstName}
+Efternamn: ${lastName}
+E-post: ${email}
+Mobilnummer: ${phone}
 
-            GYMNASIESTART
-            ────────────────────────
-            Startår: ${startYear}
+PROGRAM
+────────────────────────
+${programs.map(p => `• ${p}`).join("\n")}
 
-            SAMTYCKE
-            ────────────────────────
-            Samtycke: Ja
+GYMNASIESTART
+────────────────────────
+Startår: ${startYear}
 
-            ────────────────────────
-            Detta meddelande skickades via formuläret "Elev för en dag".
-            `;
+SAMTYCKE
+────────────────────────
+Samtycke: Ja
+`);
 
-        console.log(message);
+        window.location.href =
+            `mailto:mcat40310@gmail.com?subject=${subject}&body=${body}`;
     };
 
     return (

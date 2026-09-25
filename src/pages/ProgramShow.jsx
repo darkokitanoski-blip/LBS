@@ -103,7 +103,6 @@ const programs = {
       "Spelprogrammerare",
       "Game designer",
       "Level designer",
-      "Teknik- och IT-utbildningar",
     ],
   },
 
@@ -169,7 +168,6 @@ const programs = {
       "Art director",
       "Kommunikatör",
       "Digital designer",
-      "Design- och mediautbildningar",
     ],
   },
 
@@ -235,7 +233,6 @@ const programs = {
       "Programmerare",
       "Systemutvecklare",
       "UX/UI-designer",
-      "IT- och teknikutbildningar",
     ],
   },
 
@@ -301,7 +298,6 @@ const programs = {
       "3D-grafiker",
       "Character artist",
       "Concept artist",
-      "Grafik- och designutbildningar",
     ],
   },
 
@@ -367,7 +363,6 @@ const programs = {
       "Filmproducent",
       "Videograf",
       "Content creator",
-      "Media- och kommunikationsutbildningar",
     ],
   },
 
@@ -433,7 +428,6 @@ const programs = {
       "Ljudtekniker",
       "Artist",
       "Låtskrivare",
-      "Musik- och medieutbildningar",
     ],
   },
 };
@@ -522,7 +516,7 @@ export default function ProgramShow({
 
   window.addEventListener("scroll", (e) => {
     console.log(window.scrollY)
-    if (window.scrollY < 799 || window.scrollY > 4350) {
+    if (window.scrollY < 799 || window.scrollY > 4150) {
       setFixed("absolute")
     } else {
       setFixed("fixed")

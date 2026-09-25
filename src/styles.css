@@ -490,6 +490,104 @@ a {
     animation-delay: -3.3s;
 }
 
+.icons-floating svg:nth-child(37) {
+    top: 12%;
+    left: 8%;
+    transform: rotate(-12deg);
+    animation-delay: -1.7s;
+}
+
+.icons-floating svg:nth-child(38) {
+    top: 24%;
+    left: 82%;
+    transform: rotate(17deg);
+    animation-delay: -4.2s;
+}
+
+.icons-floating svg:nth-child(39) {
+    top: 38%;
+    left: 18%;
+    transform: rotate(-6deg);
+    animation-delay: -2.8s;
+}
+
+.icons-floating svg:nth-child(40) {
+    top: 47%;
+    left: 91%;
+    transform: rotate(11deg);
+    animation-delay: -5.1s;
+}
+
+.icons-floating svg:nth-child(41) {
+    top: 59%;
+    left: 6%;
+    transform: rotate(-19deg);
+    animation-delay: -0.9s;
+}
+
+.icons-floating svg:nth-child(42) {
+    top: 68%;
+    left: 84%;
+    transform: rotate(5deg);
+    animation-delay: -3.7s;
+}
+
+.icons-floating svg:nth-child(43) {
+    top: 77%;
+    left: 24%;
+    transform: rotate(-14deg);
+    animation-delay: -6.2s;
+}
+
+.icons-floating svg:nth-child(44) {
+    top: 89%;
+    left: 93%;
+    transform: rotate(20deg);
+    animation-delay: -2.1s;
+}
+
+.icons-floating svg:nth-child(45) {
+    top: 7%;
+    left: 43%;
+    transform: rotate(-8deg);
+    animation-delay: -4.8s;
+}
+
+.icons-floating svg:nth-child(46) {
+    top: 31%;
+    left: 55%;
+    transform: rotate(13deg);
+    animation-delay: -1.3s;
+}
+
+.icons-floating svg:nth-child(47) {
+    top: 53%;
+    left: 39%;
+    transform: rotate(-17deg);
+    animation-delay: -5.6s;
+}
+
+.icons-floating svg:nth-child(48) {
+    top: 64%;
+    left: 67%;
+    transform: rotate(9deg);
+    animation-delay: -3.0s;
+}
+
+.icons-floating svg:nth-child(49) {
+    top: 82%;
+    left: 47%;
+    transform: rotate(-11deg);
+    animation-delay: -6.8s;
+}
+
+.icons-floating svg:nth-child(50) {
+    top: 94%;
+    left: 14%;
+    transform: rotate(16deg);
+    animation-delay: -4.5s;
+}
+
 
 @keyframes floatingIcon {
     0% {
@@ -2362,6 +2460,11 @@ h4 {
     .news-grid {
         grid-template-columns: 1fr;
         padding: 2%;
+    }
+
+    #form  {
+        padding: 0px;
+        padding-top: 60px;
     }
 
     .carousel-news-mobile-port {

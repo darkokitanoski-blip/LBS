@@ -106,6 +106,20 @@ export default function Hero() {
         <FaCode></FaCode>
         <MdDesignServices></MdDesignServices>
         <RiGame2Fill></RiGame2Fill>
+                <MdDesignServices></MdDesignServices>
+        <PiFilmSlateFill></PiFilmSlateFill>
+                        <IoGameController></IoGameController>
+        <IoMusicalNotesSharp></IoMusicalNotesSharp>
+        <FaCode></FaCode>
+        <MdDesignServices></MdDesignServices>
+        <RiGame2Fill></RiGame2Fill>
+        <PiFilmSlateFill></PiFilmSlateFill>
+                <MdDesignServices></MdDesignServices>
+                <MdDesignServices></MdDesignServices>
+                <MdDesignServices></MdDesignServices>
+        <MdDesignServices></MdDesignServices>
+                <MdDesignServices></MdDesignServices>
+                <MdDesignServices></MdDesignServices>
         <PiFilmSlateFill></PiFilmSlateFill>
       </div>
 
