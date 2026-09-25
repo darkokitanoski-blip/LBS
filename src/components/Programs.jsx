@@ -22,7 +22,14 @@ const programs = [
     title: <><span>GRAFISK</span><span>DESIGN</span></>,
     link: "/program/grafiskdesign",
     src: "/64634450ff050318e95e473e_AdobeStock_317223249.webp",
-    icon: <MdDesignServices className="card-pixel" />,
+    icon: <MdDesignServices  style={{
+      filter: `
+        drop-shadow(2px 0 0 white)
+        drop-shadow(-2px 0 0 white)
+        drop-shadow(0 2px 0 white)
+        drop-shadow(0 -2px 0 white)
+      `
+    }} className="card-pixel no-stroke" />,
     desc: "Visuell kommunikation, form och kreativt skapande.",
     programtitle: "Estetiska programmet",
     programroute: "Bild och Formgivning",

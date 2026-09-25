@@ -6,8 +6,7 @@
 @import "@fontsource-variable/geist";
 @import "tailwindcss/theme.css";
 @import "tailwindcss/utilities.css";
-/* ---break---*/
-@custom-variant dark (&:is(.dark *));
+/* @custom-variant dark (&:is(.dark *)); */
 
 /* alla globala färger jag ska använda för projektet som variabler  */
 :root {
@@ -1083,8 +1082,19 @@ h4 {
 }
 
 .program-card>svg {
-    position: relative;
+        position: relative;
+        border: none
+        ;
     z-index: 1;
+          color: "white";
+      filter: "drop-shadow(0 0 0 white)"
+
+}
+
+.program-card > svg:not(.no-stroke) path {
+    stroke: white;
+    stroke-width: 2px;
+    vector-effect: non-scaling-stroke;
 }
 
 .program-card p {
@@ -2502,8 +2512,8 @@ h4 {
     .arrow-icon-lg {
         width: 34px;
         height: 34px;
-        right: 0;
-        position: absolute;
+        margin-left: 90%;
+        /* position: absolute; */
     }
 
     .heading-arrow .arrow-icon {
@@ -2532,16 +2542,6 @@ h4 {
 
     .schools h2 span {
         line-height: .94;
-    }
-
-    .arrow-icon-lg {
-        width: 34px;
-        height: 34px;
-    }
-
-    .heading-arrow .arrow-icon {
-        min-width: 28px;
-        min-height: 28px;
     }
 
     .image-corner {
@@ -3362,6 +3362,7 @@ body {
     width: 40px;
     height: 40px;
     stroke-width: 1.6;
+    margin-left: 80%;
 }
 
 .button .arrow-icon {
