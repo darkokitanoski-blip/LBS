@@ -8,6 +8,7 @@ import News from "./components/News.jsx";
 import Form from "./components/Form.jsx";
 import Footer from "./components/Footer.jsx";
 import OpenHouseInteractive from "./components/OpenHouseInteractive.jsx";
+import BackToTop from "./components/BackToTop.jsx";
 import { useParams } from "react-router-dom";
 import { useEffect } from "react";
 
@@ -43,6 +44,7 @@ export default function App() {
       </main>
 
       <Footer />
+  
     </div>
   );
 }

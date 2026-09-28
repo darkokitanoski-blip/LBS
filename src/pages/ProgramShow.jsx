@@ -5,6 +5,7 @@ import Footer from "../components/Footer";
 import SectionTransition from "../components/SectionTransition";
 import News from "../components/News";
 import { useParams } from "react-router-dom";
+import BackToTop from "../components/BackToTop";
 import {
   IoGameController,
   IoMusicalNotesSharp,
@@ -846,6 +847,7 @@ export default function ProgramShow({
 
         <SectionTransition variant="magenta" />
       <Footer></Footer>
+          <BackToTop />
     </main>
   );
 }

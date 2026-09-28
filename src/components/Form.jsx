@@ -1,6 +1,36 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 const Form = () => {
+    const [isMobile, setIsMobile] = useState(false);
+    const [isExpanded, setIsExpanded] = useState(false);
+
+    useEffect(() => {
+        const updateViewport = () => {
+            const mobile = window.innerWidth < 768;
+            setIsMobile(mobile);
+
+            if (!mobile) {
+                setIsExpanded(true);
+            }
+        };
+
+        updateViewport();
+        window.addEventListener("resize", updateViewport);
+
+        return () => window.removeEventListener("resize", updateViewport);
+    }, []);
+
+    const handleToggle = (event) => {
+        if (!isMobile) return;
+
+        const shouldIgnoreClick = event.target.closest(
+            "input, textarea, select, button, label, a"
+        );
+
+        if (shouldIgnoreClick) return;
+
+        setIsExpanded((prev) => !prev);
+    };
 
     // kanske 
     const handleSubmit = async (e) => {
@@ -125,16 +155,39 @@ Samtycke: Ja
                     </p>
                 </div>
             </div>
-            <div className="w-full max-w-3xl mx-auto bg-black text-white border border-white rounded-none p-6 md:p-10">
-                <div>
-                    <h3 className="text-2xl md:text-3xl font-semibold text-center mb-3">
-                        Anmäl dig till elev för en dag
-                    </h3>
+            <div
+                className={`form-panel ${isExpanded ? "is-open" : "is-closed"}`}
+                onClick={handleToggle}
+                aria-expanded={isExpanded}
+                role={isMobile ? "button" : undefined}
+                tabIndex={isMobile ? 0 : undefined}
+                onKeyDown={(event) => {
+                    if (!isMobile) return;
+                    if (event.key === "Enter" || event.key === " ") {
+                        event.preventDefault();
+                        setIsExpanded((prev) => !prev);
+                    }
+                }}
+            >
+                <div className="form-panel-header">
+                    <div>
+                        <h3 className="text-2xl md:text-3xl font-semibold text-center mb-3">
+                            Anmäl dig till elev för en dag
+                        </h3>
 
-                    <p className="text-sm text-center text-white/70 mb-10">
-                        Boka din plats som elev för en dag redan nu!
-                    </p>
+                        <p className="text-sm text-center text-white/70 mb-0">
+                            Boka din plats som elev för en dag redan nu!
+                        </p>
+                    </div>
 
+                    {isMobile && (
+                        <span className="form-panel-toggle" aria-hidden="true">
+                            {isExpanded ? "−" : "+"}
+                        </span>
+                    )}
+                </div>
+
+                <div className="form-panel-body">
                     <form
                         id="ams-form__6ab6824ed3c46"
                         autoComplete="on"
