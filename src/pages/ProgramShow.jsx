@@ -491,6 +491,7 @@ export default function ProgramShow({
           if (!entry.isIntersecting) return;
 
           entry.target.classList.add("is-visible");
+          console.log(entry.target)
           observer.unobserve(entry.target);
         });
       },
@@ -500,6 +501,63 @@ export default function ProgramShow({
     );
 
     revealElements.forEach((element) => observer.observe(element));
+
+    return () => observer.disconnect();
+  }, [data.title]);
+
+  useEffect(() => {
+    const page = pageRef.current;
+    const links = page?.querySelector(".program-show__quick-links");
+
+    if (!page || !links) return;
+
+    const sections = ["om", "innehall", "projekt", "kurser", "framtid"]
+      .map((id) => page.querySelector(`#${id}`))
+      .filter(Boolean);
+    const visibleSections = new Set();
+    let activeSectionId = null;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            visibleSections.add(entry.target);
+          } else {
+            visibleSections.delete(entry.target);
+          }
+        });
+
+        const activeSection = [...visibleSections].sort(
+          (first, second) =>
+            Math.abs(first.getBoundingClientRect().top - window.innerHeight * 0.25) -
+            Math.abs(second.getBoundingClientRect().top - window.innerHeight * 0.25)
+        )[0];
+
+        if (!activeSection || activeSection.id === activeSectionId) return;
+
+        activeSectionId = activeSection.id;
+        const activeLink = links.querySelector(
+          `[data-section="${activeSectionId}"]`
+        );
+
+        if (!activeLink) return;
+
+        const linksBounds = links.getBoundingClientRect();
+        const linkBounds = activeLink.getBoundingClientRect();
+        const left =
+          links.scrollLeft +
+          linkBounds.left -
+          linksBounds.left -
+          (linksBounds.width - linkBounds.width) / 2;
+
+        links.scrollTo({ left, behavior: "smooth" });
+      },
+      {
+        rootMargin: "0px 0px -70% 0px",
+      }
+    );
+
+    sections.forEach((section) => observer.observe(section));
 
     return () => observer.disconnect();
   }, [data.title]);
@@ -515,8 +573,7 @@ export default function ProgramShow({
 
   const [fixed, setFixed] = useState("absolute")
 
-  window.addEventListener("scroll", (e) => {
-    console.log(window.scrollY)
+  window.addEventListener("scroll", () => {
     if (window.scrollY < 799 || window.scrollY > 4150) {
       setFixed("absolute")
     } else {
@@ -612,6 +669,7 @@ export default function ProgramShow({
             <div className="program-show__quick-links">
               <button
                 className="program-show__quick-link"
+                data-section="om"
                 onClick={() => scrollTo("om")}
               >
                 OM PROGRAMMET
@@ -619,6 +677,7 @@ export default function ProgramShow({
 
               <button
                 className="program-show__quick-link"
+                data-section="innehall"
                 onClick={() => scrollTo("innehall")}
               >
                 INNEHÅLL
@@ -626,6 +685,7 @@ export default function ProgramShow({
 
               <button
                 className="program-show__quick-link"
+                data-section="projekt"
                 onClick={() => scrollTo("projekt")}
               >
                 PROJEKT
@@ -633,6 +693,7 @@ export default function ProgramShow({
 
               <button
                 className="program-show__quick-link"
+                data-section="kurser"
                 onClick={() => scrollTo("kurser")}
               >
                 KURSER
@@ -640,6 +701,7 @@ export default function ProgramShow({
 
               <button
                 className="program-show__quick-link"
+                data-section="framtid"
                 onClick={() => scrollTo("framtid")}
               >
                 EFTER GYMNASIET
