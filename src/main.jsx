@@ -7,7 +7,6 @@ import { Router, BrowserRouter, Route, Routes } from "react-router-dom";
 import ProgramShow from "./pages/ProgramShow.jsx";
 import NewsArticle from "./pages/NewsArticle.jsx";
 
-
 // detta main.jsx fil används för att koppla jsx filen till index.html filen så att allt fungerar.
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
