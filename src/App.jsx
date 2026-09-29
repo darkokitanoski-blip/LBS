@@ -10,6 +10,7 @@ import Footer from "./components/Footer.jsx";
 import OpenHouseInteractive from "./components/OpenHouseInteractive.jsx";
 import BackToTop from "./components/BackToTop.jsx";
 import { useParams } from "react-router-dom";
+import { Analytics } from "@vercel/analytics/next"
 import { useEffect } from "react";
 
 // här är app.jsx eller filen där alla komponenter implenteras för att bygga huvud sidan
