@@ -216,7 +216,7 @@ a {
     padding-bottom: 0;
 }
 
-.form-panel.is-closed .form-panel-body > * {
+.form-panel.is-closed .form-panel-body>* {
     overflow: hidden;
 }
 
@@ -2095,6 +2095,98 @@ h4 {
         flex-direction: column;
         align-items: flex-start;
     }
+
+        .icons-floating svg:nth-child(2) {
+        display: none;
+    }
+
+    .icons-floating svg:nth-child(5) {
+      display: none;
+    }
+
+    .icons-floating svg:nth-child(6) {
+        display: none;
+    }
+
+    .icons-floating svg:nth-child(7) {
+        display: none;
+    }
+
+    .icons-floating svg:nth-child(14) {
+        display: none;
+    }
+
+    .icons-floating svg:nth-child(25) {
+      display: none;
+    }
+
+    .icons-floating svg:nth-child(26) {
+        display: none;
+    }
+
+    .icons-floating svg:nth-child(27) {
+        display: none;
+    }
+
+    .icons-floating svg:nth-child(28) {
+       display: none;
+    }
+
+    .icons-floating svg:nth-child(29) {
+        display: none;
+    }
+
+    .icons-floating svg:nth-child(30) {
+        display: none;
+    }
+
+    .icons-floating svg:nth-child(31) {
+        display: none;
+    }
+
+    .icons-floating svg:nth-child(32) {
+        display: none;
+    }
+
+    .icons-floating svg:nth-child(33) {
+        display: none;
+    }
+
+    .icons-floating svg:nth-child(34) {
+        display: none;
+    }
+
+    .icons-floating svg:nth-child(35) {
+        display: none;
+    }
+
+    .icons-floating svg:nth-child(36) {
+        display: none;
+    }
+
+    .icons-floating svg:nth-child(37) {
+        display: none;
+    }
+
+    .icons-floating svg:nth-child(38) {
+        display: none;
+    }
+
+    .icons-floating svg:nth-child(39) {
+        display: none;
+    }
+
+    .icons-floating svg:nth-child(40) {
+        display: none;
+    }
+
+    .icons-floating svg:nth-child(41) {
+        display: none;
+    }
+
+    .icons-floating svg:nth-child(42) {
+        display: none;
+    }
 }
 
 @media (max-width: 900px) {
@@ -2578,7 +2670,7 @@ h4 {
         padding: 2%;
     }
 
-    #form  {
+    #form {
         padding: 0px;
         padding-top: 60px;
     }
@@ -4416,7 +4508,7 @@ body {
     left: -15px;
     bottom: -30px;
 
-    color: var(--program-dark);
+    color: var(--program-light);
 
     font-family: "Big Shoulders Text", Impact, sans-serif;
     font-size: clamp(130px, 18vw, 270px);
@@ -5156,7 +5248,7 @@ body {
     text-transform: uppercase;
     cursor: pointer;
     transition: color .25s ease, transform .25s ease;
-        position: absolute;
+    position: absolute;
     top: 28px;
     left: 0;
 

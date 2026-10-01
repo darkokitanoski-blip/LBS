@@ -764,6 +764,7 @@ export default function ProgramShow({
         <div
           className="program-show__projects-visual"
           data-reveal="left"
+          style={{backgroundImage: `url(${data.src})`, backgroundSize: "cover", backgroundPosition: "center"}}
         >
           <CornerMarks />
         </div>
