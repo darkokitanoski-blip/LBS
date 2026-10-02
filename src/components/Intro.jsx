@@ -8,7 +8,6 @@ export default function Intro() {
     <section className="intro section" id="about">
       <div className="intro-visual pixel-frame"><ImagePlaceholder label="[ LBS / CREATIVE ]" src="lbs-gymnasiemassa-202304-600x600.jpg" className="intro-image" /></div>
       <div className="intro-copy">
-        <p className="mono-label dark">[ LBS KREATIVA GYMNASIET ]</p>
         <h2><span className="text-block dark-block">SKAPA</span>{" "}<span className="text-block dark-block">FRAMTIDEN</span></h2>
         <p className="lead">LBS Kreativa Gymnasiet utbildar dig för att lyckas i dagens kreativa branscher. Här finns gymnasieutbildningar för dig som är intresserad av digitalt skapande och som vill ha högskolebehörighet efter gymnasiet.</p>
         <a className="button button-light" href="#programs">VÅRA PROGRAM <ArrowIcon size="sm" /></a>

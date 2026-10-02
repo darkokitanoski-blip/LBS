@@ -156,7 +156,7 @@ Samtycke: Ja
                 </div>
             </div>
             <div
-                className={`form-panel ${isExpanded ? "is-open" : "is-closed"}`}
+                className={`form-panel flex items-center justify-center ${isExpanded ? "is-open" : "is-closed"}`}
                 onClick={handleToggle}
                 aria-expanded={isExpanded}
                 role={isMobile ? "button" : undefined}
@@ -169,7 +169,13 @@ Samtycke: Ja
                     }
                 }}
             >
-                    
+                    <a
+                        href="https://lbs.se/lund/elev-for-en-dag/"
+                        target="_blank"
+                        className="inline-flex items-center justify-center bg-white px-6 py-3 text-base font-semibold text-black shadow-sm transition hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-transparent"
+                    >
+                        Skicka anmälan här!
+                    </a>
             </div>
         </div>
     );

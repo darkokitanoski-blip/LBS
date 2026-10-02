@@ -70,7 +70,7 @@ export default function App() {
 
           </>
         )}
-        {activeSection === "about" ? <News></News> : null}
+        {activeSection === "about" ? <><News></News><CreativeGallery></CreativeGallery></> : null}
         <SectionTransition variant={activeSection === "brand" ? "magenta" : activeSection === "contact" ? "black" : activeSection === "openhouse" ? "magenta" : activeSection === "form" ? "yellow" : activeSection === "programs" ? "green" : activeSection === "about" ? "green" : undefined} /> 
       </main>
 

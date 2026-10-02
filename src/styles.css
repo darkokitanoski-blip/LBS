@@ -92,7 +92,7 @@ a {
 }
 
 #contact, #openhouse, #form, #open-house {
-    height: calc(100vh - clamp(77px, 9.4vw, 77.4px));
+    height: calc(100vh - clamp(37px, 5.4vw, 77.4px));
     
 }
 
@@ -2229,95 +2229,7 @@ h4 {
         align-items: flex-start;
     }
 
-        .icons-floating svg:nth-child(2) {
-        display: none;
-    }
-
-    .icons-floating svg:nth-child(5) {
-      display: none;
-    }
-
-    .icons-floating svg:nth-child(6) {
-        display: none;
-    }
-
-    .icons-floating svg:nth-child(7) {
-        display: none;
-    }
-
-    .icons-floating svg:nth-child(14) {
-        display: none;
-    }
-
-    .icons-floating svg:nth-child(25) {
-      display: none;
-    }
-
-    .icons-floating svg:nth-child(26) {
-        display: none;
-    }
-
-    .icons-floating svg:nth-child(27) {
-        display: none;
-    }
-
-    .icons-floating svg:nth-child(28) {
-       display: none;
-    }
-
-    .icons-floating svg:nth-child(29) {
-        display: none;
-    }
-
-    .icons-floating svg:nth-child(30) {
-        display: none;
-    }
-
-    .icons-floating svg:nth-child(31) {
-        display: none;
-    }
-
-    .icons-floating svg:nth-child(32) {
-        display: none;
-    }
-
-    .icons-floating svg:nth-child(33) {
-        display: none;
-    }
-
-    .icons-floating svg:nth-child(34) {
-        display: none;
-    }
-
-    .icons-floating svg:nth-child(35) {
-        display: none;
-    }
-
-    .icons-floating svg:nth-child(36) {
-        display: none;
-    }
-
-    .icons-floating svg:nth-child(37) {
-        display: none;
-    }
-
-    .icons-floating svg:nth-child(38) {
-        display: none;
-    }
-
-    .icons-floating svg:nth-child(39) {
-        display: none;
-    }
-
-    .icons-floating svg:nth-child(40) {
-        display: none;
-    }
-
-    .icons-floating svg:nth-child(41) {
-        display: none;
-    }
-
-    .icons-floating svg:nth-child(42) {
+        .icons-floating svg {
         display: none;
     }
 }
@@ -3008,6 +2920,7 @@ h4 {
     .transition-green,
     .transition-cyan, .transition-yellow, .transition-magenta, .transition-black {
         min-height: 130px;
+        z-index: 9999;
     }
 
     .schools h2 span {
