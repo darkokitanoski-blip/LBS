@@ -92,7 +92,7 @@ a {
 }
 
 #contact, #openhouse, #form, #open-house {
-    height: calc(100vh - clamp(78px, 9.4vw, 77.4px));
+    height: calc(100vh - clamp(77px, 9.4vw, 77.4px));
     
 }
 
@@ -958,6 +958,18 @@ h4 {
 .button-light {
     background: var(--cyan);
     color: var(--dark-cyan);
+}
+.button-light-green {
+    background: var(--green);
+    color: var(--dark-green);
+}
+.button-light-yellow {
+    background: var(--yellow);
+    color: var(--dark-yellow);
+}
+.button-light-white {
+    background: var(--white);
+    color: var(--black);
 }
 
 .button-outline-light {
@@ -2350,6 +2362,11 @@ h4 {
     .main {
 
         height: 100vh !important;
+    }
+
+    .hero {
+        display:block;
+        padding-top: 60%;
     }
 }
 

@@ -58,7 +58,7 @@ export default function App() {
           <SelectedSection />
         ) : (
           <>
-            <Hero />
+            <Hero onNavigate={handleNavigate} />
             {/* {/* <Intro />
             <SectionTransition variant="green" />
             <Programs />
