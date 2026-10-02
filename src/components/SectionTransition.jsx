@@ -14,10 +14,14 @@ export default function SectionTransition({ variant }) {
     <section className={`section-transition transition-${variant}`} aria-hidden="true">
       <div className="transition-marquee">
         <div className="transition-track">
-          {[...messages, ...messages, ].map((message, index) => (
-            <span key={`${message}-${index}`}>
-              {message} <b><ArrowIcon size="md" /></b>
-            </span>
+          {[0, 1].map((group) => (
+            <div className="transition-group" key={group}>
+              {messages.map((message, index) => (
+                <span key={`${group}-${message}-${index}`}>
+                  {message} <b><ArrowIcon size="md" /></b>
+                </span>
+              ))}
+            </div>
           ))}
         </div>
       </div>

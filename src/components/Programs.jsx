@@ -83,8 +83,7 @@ export default function Programs() {
   return (
     <section className="programs section-dark" id="programs">
       <div className="section-heading">
-        <p className="mono-label">[ VÅRA PROGRAM ]</p>
-        <h2><span>VÅRA</span><br />PROGRAM <span className="heading-arrow"><ArrowIcon size="md" /></span></h2>
+        <h2><span className="text-center">VÅRA PROGRAM </span><br /></h2>
       </div>
 
       <div className="program-grid">

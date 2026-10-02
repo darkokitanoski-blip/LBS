@@ -15,7 +15,7 @@ const navItems = [
   ["Kontakta oss", "#contact"]
 ];
 
-export default function Header() {
+export default function Header({ onNavigate, activeSection }) {
   const [open, setOpen] = useState(false);
   const [Transparent, setTransparent] = useState("transparent")
   const [scrollDirection, setScrollDirection] = useState("up");
@@ -50,10 +50,24 @@ export default function Header() {
 
   return (
     <header
-      className="header"
-      style={{ top: scrollDirection === "down" ? "-50%" : "0%", backgroundColor: Transparent, width: Width, padding: Padding }}
+      className={`header ${activeSection === "openhouse" ? "header-openhouse-active" : ""}`}
+      style={{
+        top: scrollDirection === "down" ? "-50%" : "0%",
+        backgroundColor: activeSection === "openhouse" ? "var(--white)" : Transparent,
+        width: Width,
+        padding: Padding
+      }}
     >
-      <a className="brand" href="#" aria-label="LBS Kreativa Gymnasiet">
+      <a
+        className="brand"
+        href="/"
+        id="brand"
+        aria-label="LBS Kreativa Gymnasiet"
+        onClick={(event) => {
+          event.preventDefault();
+          onNavigate("brand");
+        }}
+      >
         <span className="brand-box">
           <img src="/lbslogosvg.svg" alt="LBS" />
         </span>
@@ -78,11 +92,31 @@ export default function Header() {
 
       <nav className={`nav ${open ? "nav-open" : ""}`}>
         {navItems.map(([label, href]) => (
-          <a key={label} href={href} onClick={() => setOpen(false)}>
+          <a
+            key={label}
+            href={href}
+            className={activeSection === href.slice(1) ? "is-active" : undefined}
+            aria-current={activeSection === href.slice(1) ? "page" : undefined}
+            onClick={(event) => {
+              event.preventDefault();
+              setOpen(false);
+              onNavigate(href.slice(1));
+            }}
+          >
             {label}
           </a>
         ))}
-        <a className="nav-cta" href="#openhouse" onClick={() => setOpen(false)}>
+        <a
+          className="nav-cta"
+          href="#openhouse"
+          aria-current={activeSection === "openhouse" ? "page" : undefined}
+          data-active={activeSection === "openhouse" || undefined}
+          onClick={(event) => {
+            event.preventDefault();
+            setOpen(false);
+            onNavigate("openhouse");
+          }}
+        >
           ÖPPET HUS <ArrowIcon size="sm" />
         </a>
       </nav>

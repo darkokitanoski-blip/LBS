@@ -58,7 +58,6 @@ export default function News() {
       </div>
 
       <div className="news-heading">
-        <p className="mono-label dark">[ SENASTE ]</p>
         <h2>WHAT'S NEW?</h2>
       </div>
 

@@ -135,9 +135,9 @@ export default function Hero() {
             <a className="button button-outline-light" href="#form">ANMÄL DIG <ArrowIcon size="sm" /></a>
           </div>
         </div>
-        <a href="#openhouse">        
+        {/* <a href="#openhouse">        
           <OpenHouseCarousel />
-        </a>
+        </a> */}
 
       </div>
       <div className="hero-bottom"></div>

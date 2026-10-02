@@ -114,7 +114,7 @@ export default function NewsArticle({
     }
 
     if (window.history.length > 1) {
-      window.location.href = "/#news";
+      history.back();
     }
   };
 
