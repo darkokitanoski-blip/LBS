@@ -224,7 +224,7 @@ main.section-loading-b::before {
 .header {
     position: fixed;
     z-index: 20;
-    top: 0;
+    bottom: 0;
     left: 50%;
     transform: translateX(-50%);
     width: 100%;
@@ -271,83 +271,7 @@ main.section-loading-b::before {
 .form-panel {
     width: 100%;
     max-width: 48rem;
-}
-
-.form-panel-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 1rem;
-    width: 100%;
-    padding: 1.5rem 1.5rem 0.5rem;
-    cursor: pointer;
-}
-
-.form-panel-toggle {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 2rem;
-    height: 2rem;
-    border: 1px solid rgba(255, 255, 255, 0.7);
-    font-size: 1.5rem;
-    line-height: 1;
-    color: var(--yellow);
-    flex-shrink: 0;
-}
-
-.form-panel-body {
-    display: grid;
-    grid-template-rows: 1fr;
-    transition: grid-template-rows 0.35s ease, opacity 0.25s ease, padding 0.25s ease;
-    opacity: 1;
-    padding: 0 1.5rem 1.5rem;
-}
-
-.form-panel.is-closed .form-panel-body {
-    grid-template-rows: 0fr;
-    opacity: 0;
-    padding-top: 0;
-    padding-bottom: 0;
-}
-
-.form-panel.is-closed .form-panel-body>* {
-    overflow: hidden;
-}
-
-.form-panel.is-closed .form-panel-header {
-    padding-bottom: 1.5rem;
-}
-
-@media (min-width: 768px) {
-    .form-panel {
-        max-width: 48rem;
-        cursor: default;
-        overflow: visible;
-    }
-
-    .form-panel-header {
-        display: block;
-        padding: 2.5rem 2.5rem 0;
-        cursor: default;
-    }
-
-    .form-panel-body {
-        display: block;
-        opacity: 1;
-        padding: 0 2.5rem 2.5rem;
-    }
-
-    .form-panel-toggle {
-        display: none;
-    }
-
-    .form-panel.is-closed .form-panel-body {
-        grid-template-rows: 1fr;
-        opacity: 1;
-        padding-top: 0;
-        padding-bottom: 2.5rem;
-    }
+    
 }
 
 .footer-brand:nth-child(1) {
@@ -2232,6 +2156,12 @@ h4 {
         .icons-floating svg {
         display: none;
     }
+
+    .form-panel {
+    width: 100%;
+    max-width: 48rem;
+    padding: 20px 0px 70px 0px;
+}
 }
 
 @media (max-width: 900px) {
@@ -2582,7 +2512,7 @@ h4 {
     }
 
     .header-openhouse-active .nav {
-        background: var(--white);
+        background: var(--dark-cyan);
         border-color: rgba(17, 17, 17, .2);
     }
 

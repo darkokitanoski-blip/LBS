@@ -39,8 +39,6 @@ export default function Header({ onNavigate, activeSection }) {
         return;
       }
 
-      setScrollDirection(currentScrollY > previousScrollY ? "down" : "up");
-      previousScrollY = currentScrollY;
     };
 
     window.addEventListener("scroll", handleScroll, { passive: true });
@@ -50,12 +48,12 @@ export default function Header({ onNavigate, activeSection }) {
 
   return (
     <header
-      className={`header ${activeSection === "openhouse" ? "header-openhouse-active" : ""}`}
+      className={`header `}
       style={{
         top: scrollDirection === "down" ? "-50%" : "0%",
-        backgroundColor: activeSection === "openhouse" ? "var(--white)" : Transparent,
-        width: Width,
-        padding: Padding
+        backgroundColor: `${activeSection === "openhouse" ? "var(--dark-cyan)" : Transparent}`,
+        width: `${activeSection === "openhouse" ? "100%" : Width}`,
+        padding: `${activeSection === "openhouse" ? "0 10%" : Padding}`
       }}
     >
       <a
