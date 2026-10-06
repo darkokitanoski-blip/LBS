@@ -133,8 +133,9 @@ export default function Hero({ onNavigate }) {
           <div className="hero-actions">
             <a className="button button-light" href="#about" onClick={(event) => { event.preventDefault(); onNavigate("about"); }}>OM OSS<ArrowIcon size="sm" /></a>
             <a className="button button-light-green" href="#programs" onClick={(event) => { event.preventDefault(); onNavigate("programs"); }}>VÅRA PROGRAM <ArrowIcon size="sm" /></a>
-            <a className="button button-light-yellow" href="#form" onClick={(event) => { event.preventDefault(); onNavigate("form"); }}>ANMÄL DIG <ArrowIcon size="sm" /></a>
+            <a className="button button-light-orange" href="#form" onClick={(event) => { event.preventDefault(); onNavigate("form"); }}>ANMÄL DIG <ArrowIcon size="sm" /></a>
             <a className="button button-light-white" href="#contact" onClick={(event) => { event.preventDefault(); onNavigate("contact"); }}>KONTAKTA OSS <ArrowIcon size="sm" /></a>
+            <a className="button button-light-yellow" href="#openhouse" onClick={(event) => { event.preventDefault(); onNavigate("openhouse"); }}>SKOL KARTA <ArrowIcon size="sm" /></a>
           </div>
         </div>
         {/* <a href="#openhouse">        

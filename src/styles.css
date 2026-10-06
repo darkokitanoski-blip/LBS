@@ -896,6 +896,20 @@ h4 {
     color: var(--black);
 }
 
+.button-light-orange {
+    background: var(--orange);
+    color: var(--dark-orange);
+}
+
+.form-wrapper::-webkit-scrollbar {
+    background-color: var(--dark-yellow);
+    border: var(--yellow) 1px solid
+}
+
+.form-wrapper::-webkit-scrollbar-thumb {
+    background-color: var(--yellow)
+}
+
 .button-outline-light {
     border-color: var(--cyan);
     color: var(--cyan);

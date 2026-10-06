@@ -115,7 +115,7 @@ export default function Header({ onNavigate, activeSection }) {
             onNavigate("openhouse");
           }}
         >
-          ÖPPET HUS <ArrowIcon size="sm" />
+          SKOL KARTA <ArrowIcon size="sm" />
         </a>
       </nav>
     </header>

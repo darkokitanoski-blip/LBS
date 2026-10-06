@@ -93,7 +93,7 @@ Samtycke: Ja
 
     return (
         <div className="form flex-col md:flex-row lg:flex gap-20 pt-20 " id="form">
-            <div className="w-full text-white p-5">
+            <div className="form-wrapper w-full text-white p-5 overflow-auto">
                 <h1 className="text-4xl md:text-5xl font-semibold tracking-tight mb-8">
                     ELEV FÖR EN DAG PÅ LBS LUND
                 </h1>
