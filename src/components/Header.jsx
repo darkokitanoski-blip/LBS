@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import ArrowIcon from "./ArrowIcon.jsx";
-import { GiHamburgerMenu } from "react-icons/gi";
-import { IoCloseSharp } from "react-icons/io5";
+import { ClipboardList, GraduationCap, Info, Phone } from "lucide-react";
 
 
 
@@ -9,14 +8,13 @@ import { IoCloseSharp } from "react-icons/io5";
 // här okcså gör jag animationen för header när man scrollar.
 
 const navItems = [
-  ["Om oss", "#about"],
-  ["Våra program", "#programs"],
-  ["Anmäl dig", "#form"],
-  ["Kontakta oss", "#contact"]
+  ["Om oss", "#about", Info],
+  ["Våra program", "#programs", GraduationCap],
+  ["Anmäl dig", "#form", ClipboardList],
+  ["Kontakta oss", "#contact", Phone]
 ];
 
 export default function Header({ onNavigate, activeSection }) {
-  const [open, setOpen] = useState(false);
   const [Transparent, setTransparent] = useState("transparent")
   const [scrollDirection, setScrollDirection] = useState("up");
   const [Width, setWidth] = useState("min(100% - 48px, var(--max))")
@@ -48,7 +46,7 @@ export default function Header({ onNavigate, activeSection }) {
 
   return (
     <header
-      className={`header `}
+      className={`header ${activeSection === "openhouse" ? "header-openhouse-active" : ""}`}
       style={{
         top: scrollDirection === "down" ? "-50%" : "0%",
         backgroundColor: `${activeSection === "openhouse" ? "var(--dark-cyan)" : Transparent}`,
@@ -73,23 +71,8 @@ export default function Header({ onNavigate, activeSection }) {
       </a>
 
 
-      <button
-        className="menu-button"
-        onClick={() => setOpen(!open)}
-        aria-label={open ? "Stäng meny" : "Öppna meny"}
-        aria-expanded={open}
-      >
-        <span>[</span>
-
-        <span className={`menu-icon ${open ? "menu-icon-open" : ""}`}>
-          {open ? <IoCloseSharp /> : <GiHamburgerMenu />}
-        </span>
-
-        <span>]</span>
-      </button>
-
-      <nav className={`nav ${open ? "nav-open" : ""}`}>
-        {navItems.map(([label, href]) => (
+      <nav className="nav" aria-label="Huvudmeny">
+        {navItems.map(([label, href, Icon]) => (
           <a
             key={label}
             href={href}
@@ -97,25 +80,33 @@ export default function Header({ onNavigate, activeSection }) {
             aria-current={activeSection === href.slice(1) ? "page" : undefined}
             onClick={(event) => {
               event.preventDefault();
-              setOpen(false);
               onNavigate(href.slice(1));
             }}
           >
-            {label}
+            <Icon className="nav-icon" aria-hidden="true" />
+            <span className="nav-label">{label}</span>
           </a>
         ))}
         <a
-          className="nav-cta"
           href="#openhouse"
+          className="nav-cta"
           aria-current={activeSection === "openhouse" ? "page" : undefined}
           data-active={activeSection === "openhouse" || undefined}
           onClick={(event) => {
             event.preventDefault();
-            setOpen(false);
             onNavigate("openhouse");
           }}
         >
-          SKOL KARTA <ArrowIcon size="sm" />
+          <span className="nav-icon-wrap">
+            <svg className="nav-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="m3 6 6-3 6 3 6-3v15l-6 3-6-3-6 3V6Z" stroke="currentColor" strokeWidth="1.8" strokeLinejoin="round" />
+              <path d="M9 3v15m6-12v15" stroke="currentColor" strokeWidth="1.8" />
+              <path d="M12 8.5a2 2 0 0 1 4 0c0 1.5-2 3.5-2 3.5s-2-2-2-3.5Z" fill="currentColor" />
+              <circle cx="14" cy="8.5" r=".65" fill="var(--black)" />
+            </svg>
+          </span>
+          <span className="nav-label">SKOLANS KARTA</span>
+          <span className="nav-cta-arrow"><ArrowIcon size="sm" /></span>
         </a>
       </nav>
     </header>

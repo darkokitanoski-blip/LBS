@@ -40,7 +40,9 @@ export default function App() {
   const isSingleSectionView = Boolean(SelectedSection);
   const handleNavigate = (section) => {
     setActiveSection(section);
+    console.log("Navigating to section:", section);
     setNavigationVersion((version) => version + 1);
+    window.scrollTo({ top: 0, behavior: "smooth" });
   };
   const loadingClass = navigationVersion === 0
     ? ""
@@ -55,7 +57,7 @@ export default function App() {
       <Header onNavigate={handleNavigate} activeSection={activeSection} />
       <main className={`${loadingClass} ${isSingleSectionView ? "single-section-view" : ""}`}>
         {SelectedSection ? (
-          <SelectedSection />
+          <SelectedSection onNavigate={handleNavigate} />
         ) : (
           <>
             <Hero onNavigate={handleNavigate} />
@@ -70,8 +72,9 @@ export default function App() {
 
           </>
         )}
+        
         {activeSection === "about" ? <><News></News><CreativeGallery></CreativeGallery></> : null}
-        <SectionTransition variant={activeSection === "brand" ? "magenta" : activeSection === "contact" ? "black" : activeSection === "openhouse" ? "magenta" : activeSection === "form" ? "yellow" : activeSection === "programs" ? "green" : activeSection === "about" ? "green" : undefined} /> 
+        <SectionTransition variant={activeSection === "brand" ? "magenta" : activeSection === "contact" ? "black" : activeSection === "openhouse" ? "magenta" : activeSection === "form" ? "yellow" : activeSection === "programs" ? "green" : activeSection === "about" ? "green" : undefined} />
       </main>
 
       {activeSection !== "contact" && activeSection !== "brand" && activeSection !== "openhouse" && activeSection !== "form" && activeSection !== "programs" && activeSection !== "about" ? <Footer /> : null}
