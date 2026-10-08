@@ -80,6 +80,7 @@ const programs = [
 // komponent där jag skapar sektion för programmer i skolan, och implemnterar ikon komponenter 
 
 export default function Programs() {
+
   return (
     <section className="programs section-dark" id="programs">
       <div className="section-heading">
