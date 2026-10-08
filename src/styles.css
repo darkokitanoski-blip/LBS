@@ -389,6 +389,29 @@ main.section-loading-b::before {
     color: var(--white);
 }
 
+.btn-classroom-pick {
+    border: 1px solid var(--dark-cyan);
+    font-family: "IBM Plex Mono", monospace;
+}
+
+.btn-classroom-pick svg {
+    animation: animationarrow 1.2s ease-in-out infinite;
+}
+
+@keyframes animationarrow {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(3px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
 .menu-button {
     display: none;
 }

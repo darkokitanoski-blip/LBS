@@ -2,6 +2,7 @@ import React from 'react'
 import ImagePlaceholder from './ImagePlaceholder'
 import ArrowIcon from './ArrowIcon'
 import SectionTransition from './SectionTransition'
+import ButtonClassroom from './ButtonClassroom'
 
 const OpenHouseInteractive = () => {
     return (
@@ -13,6 +14,7 @@ const OpenHouseInteractive = () => {
                     <h2 className='text-center w-full'>SKOLANS KARTA</h2>
                 </div>
                  <div className="intro-visual pixel-frame"><ImagePlaceholder label="[ LBS / CREATIVE ]" className="intro-image" /></div>
+                 <ButtonClassroom />
             </section>
         </>
     )

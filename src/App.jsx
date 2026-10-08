@@ -9,8 +9,8 @@ import Form from "./components/Form.jsx";
 import Footer from "./components/Footer.jsx";
 import OpenHouseInteractive from "./components/OpenHouseInteractive.jsx";
 import BackToTop from "./components/BackToTop.jsx";
-import { useParams } from "react-router-dom";
-import { useEffect, useState } from "react";
+import { useLocation, useNavigate } from "react-router-dom";
+import { useState } from "react";
 
 // här är app.jsx eller filen där alla komponenter implenteras för att bygga huvud sidan
 const sectionComponents = {
@@ -22,24 +22,16 @@ const sectionComponents = {
 };
 
 export default function App() {
-  const [activeSection, setActiveSection] = useState("brand");
+  const navigate = useNavigate();
+  const location = useLocation();
+  const sectionFromPath = location.pathname.slice(1);
+  const activeSection = sectionComponents[sectionFromPath] ? sectionFromPath : "brand";
   const [navigationVersion, setNavigationVersion] = useState(0);
-
-
-
-  useEffect(() => {
-    const urlget = window.location.href
-    if (urlget === "https://lbs-wine-rho.vercel.app/" || urlget === "http://localhost:5173/") {
-      return;
-    } else {
-      window.location.href = urlget
-    }
-  }, [])
 
   const SelectedSection = sectionComponents[activeSection];
   const isSingleSectionView = Boolean(SelectedSection);
   const handleNavigate = (section) => {
-    setActiveSection(section);
+    navigate(section === "brand" ? "/" : `/${section}`);
     console.log("Navigating to section:", section);
     setNavigationVersion((version) => version + 1);
     window.scrollTo({ top: 0, behavior: "smooth" });
@@ -55,7 +47,7 @@ export default function App() {
   return (
     <div className="site">
       <Header onNavigate={handleNavigate} activeSection={activeSection} />
-      <main className={`${loadingClass} ${isSingleSectionView ? "single-section-view" : ""}`}>
+      <main className={`${activeSection === "brand" ? "" : loadingClass} ${isSingleSectionView ? "single-section-view" : ""}`}>
         {SelectedSection ? (
           <SelectedSection onNavigate={handleNavigate} />
         ) : (

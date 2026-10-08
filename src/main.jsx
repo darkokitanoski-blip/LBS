@@ -3,7 +3,7 @@ import ReactDOM from "react-dom/client";
 import App from "./App.jsx";
 import "./styles.css";
 import { Analytics } from "@vercel/analytics/react";
-import { Router, BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import ProgramShow from "./pages/ProgramShow.jsx";
 import NewsArticle from "./pages/NewsArticle.jsx";
 
@@ -13,7 +13,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
     <BrowserRouter>
       <Analytics />
       <Routes>
-        <Route path="/" element={<App />} />
+        <Route path="/*" element={<App />} />
         <Route path="/program/:programmename" element={<ProgramShow />} />
         <Route path="/news/:slug" element={<NewsArticle />} />
       </Routes>
