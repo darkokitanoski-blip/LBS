@@ -386,7 +386,7 @@ main.section-loading-b::before {
 .header-openhouse-active,
 .header-openhouse-active .nav a,
 .header-openhouse-active .menu-button {
-    color: var(--black);
+    color: var(--white);
 }
 
 .menu-button {
