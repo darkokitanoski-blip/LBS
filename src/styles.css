@@ -368,6 +368,13 @@ main.section-loading-b::before {
     font-family: "IBM Plex Mono", monospace;
     font-size: 10px;
     font-weight: 500;
+    display: flex;
+    align-items: center;
+    border: 1px solid var(--yellow);
+}
+
+.nav-cta svg {
+    margin-top: -2px;
 }
 
 .nav .nav-cta[data-active="true"],
