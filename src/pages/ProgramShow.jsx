@@ -25,6 +25,7 @@ import {
 import {
   PiFilmSlateFill,
 } from "react-icons/pi";
+import OpenHouseInteractive from "../components/OpenHouseInteractive";
 
 const themeColors = {
   cyan: {
@@ -909,10 +910,8 @@ export default function ProgramShow({
         </div>
       </section>
 
-      <News></News>
+      <OpenHouseInteractive></OpenHouseInteractive>
 
-        <SectionTransition variant="magenta" />
-      <Footer></Footer>
           <BackToTop />
     </main>
   );

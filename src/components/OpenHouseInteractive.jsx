@@ -10,32 +10,33 @@ const OpenHouseInteractive = () => {
         Karta: ["/Karta_vit.png", "SKOLANS KARTA"],
         C: ["/C_pink_copy.png", "C BYGGNADEN"],
         F: ["/Fakiren_map.png_double.png", "F BYGGNADEN"],
-        D: ["/D1_och_D2.png", "D BYGGNADEN"],
+        D: ["/D1_och_D2_nr2.png", "D BYGGNADEN(första våning)"],
+        Dupp: ["/Map_D3_Recovered_GD.png", "D BYGGNADEN (andra våning)"],
         Studion: ["/Sudion_bla_textt.png", "STUDIO"],
-        Aupp: ["/Lobbyyyyy_copy.png", "A BYGGNADEN(2)"],
-        Aner: ["/IMG_8195.png", "A BYGGNADEN(1)"],
+        Aupp: ["/Lobbyyyyy_copy.png", "A BYGGNADEN(tredje våning)"],
+        Aner: ["/IMG_8195.png", "A BYGGNADEN(andra våning)"],
     }
 
     const buttons = [
         {
             id: "button-c",
-            label: "C",
+            label: "C BYGGNADEN",
             imageKey: "C",
-            x: 36,
+            x: 26,
             y: 45,
             visible: true,
         },
         {
             id: "button-f",
-            label: "F",
+            label: "F BYGGNADEN",
             imageKey: "F",
-            x: 74,
+            x: 80,
             y: 70,
             visible: true,
         },
         {
             id: "button-d",
-            label: "D",
+            label: "D BYGGNADEN",
             imageKey: "D",
             x: 23,
             y: 73,
@@ -45,16 +46,16 @@ const OpenHouseInteractive = () => {
             id: "button-studion",
             label: "Studion",
             imageKey: "Studion",
-            x: 63,
-            y: 35,
+            x: 66,
+            y: 40,
             visible: true,
         },
         {
             id: "button-aner",
-            label: "Aner",
+            label: "A BYGGNADEN(1)",
             imageKey: "Aner",
-            x: 80,
-            y: 40,
+            x: 30,
+            y: 16,
             visible: true,
         },
     ]
@@ -80,60 +81,43 @@ const OpenHouseInteractive = () => {
 
     const isMainMap = roomSelected === "Karta"
     const showAnerNavigation = roomSelected === "Aner"
+    const showDNavigation = roomSelected === "D"
 
     return (
-        <section
-            className="intro section min-h-[90vh] flex flex-col items-center"
-            id="openhouse"
-        >
-            <div className="intro-copy w-[90%] text-center p-10">
+        <section className="section openhouse-map-section" id="openhouse">
+            <div className="openhouse-map-heading text-center">
                 <p className="mono-label dark">[ ÖPPET HUS ]</p>
-                <h2 className="text-center w-full">SKOLANS KARTA</h2>
             </div>
 
-            <div className="w-full px-4 sm:px-8 flex justify-center">
-                <div className="w-full max-w-[900px]">
+            <div className="openhouse-map-content">
+                <div className={`openhouse-map-toolbar${!isMainMap ? " has-back" : ""}`}>
+                    {!isMainMap && (
+                        <ButtonClassroom
+                            id="button-back"
+                            onClick={goBack}
+                        >
+                            <span aria-hidden="true">←</span>
+                            <span>Tillbaka</span>
+                        </ButtonClassroom>
+                    )}
 
-                    {/* Dynamic room title */}
                     <h3
                         key={`title-${roomSelected}`}
-                        className="text-center text-xl md:text-2xl font-semibold mb-4 animate-map-in"
+                        className="openhouse-map-title text-center animate-map-in"
                     >
                         {roompick[roomSelected][1]}
                     </h3>
+                </div>
 
-                    {/* Map and positioned buttons */}
-                    <div className="relative w-full">
-
+                {/* Map and positioned buttons */}
+                <div className="openhouse-map-stage">
+                    <div className="openhouse-map-image-wrap">
                         <img
                             key={roomSelected}
                             src={roompick[roomSelected][0]}
                             alt={roompick[roomSelected][1]}
-                            className="block w-full h-auto animate-map-in"
+                            className="animate-map-in"
                         />
-
-                        {/* Return button */}
-                        <button
-                            type="button"
-                            onClick={goBack}
-                            aria-label="Tillbaka till föregående karta"
-                            aria-hidden={isMainMap}
-                            tabIndex={isMainMap ? -1 : 0}
-                            className={`absolute top-3 left-3 z-20
-                                flex items-center gap-2 rounded-full
-                                bg-black/75 text-white px-4 py-2
-                                backdrop-blur-sm
-                                transition-all duration-300 ease-out
-                                hover:bg-black
-                                ${
-                                    !isMainMap
-                                        ? "opacity-100 translate-y-0"
-                                        : "opacity-0 -translate-y-2 pointer-events-none"
-                                }`}
-                        >
-                            <span aria-hidden="true">←</span>
-                            Tillbaka
-                        </button>
 
                         {/* Classroom buttons: only on main map */}
                         {isMainMap &&
@@ -168,20 +152,41 @@ const OpenHouseInteractive = () => {
                                     }}
                                     onClick={() => selectRoom("Aupp")}
                                 >
-                                    ↑ Up
+                                    ↑ Tredje våningen
                                 </ButtonClassroom>
+                            </>
+                        )}
 
+                        {showAnerNavigation && (
+                            <>
                                 <ButtonClassroom
-                                    id="button-down-aner"
+                                    id="button-up-aupp"
                                     style={{
                                         position: "absolute",
                                         left: "50%",
-                                        top: "85%",
+                                        top: "15%",
                                         transform: "translate(-50%, -50%)",
                                     }}
-                                    onClick={() => selectRoom("Aner")}
+                                    onClick={() => selectRoom("Aupp")}
                                 >
-                                    ↓ Andra
+                                    ↑ Tredje våningen
+                                </ButtonClassroom>
+                            </>
+                        )}
+
+                        {showDNavigation && (
+                            <>
+                                <ButtonClassroom
+                                    id="button-up-aupp"
+                                    style={{
+                                        position: "absolute",
+                                        left: "50%",
+                                        top: "15%",
+                                        transform: "translate(-50%, -50%)",
+                                    }}
+                                    onClick={() => selectRoom("Dupp")}
+                                >
+                                    ↑ Andra våningen
                                 </ButtonClassroom>
                             </>
                         )}
