@@ -437,6 +437,16 @@ const programs = {
   },
 };
 
+const programMapRooms = {
+  spelutveckling: "Aner",
+
+  grafiskdesign: "Dupp",
+  aiwebutveckling: "D",
+  spelgrafik: "D",
+  fotofilm: "Studion",
+  musikproduktion: "Studion",
+};
+
 function Arrow() {
   return <span aria-hidden="true">→</span>;
 }
@@ -515,7 +525,7 @@ export default function ProgramShow({
 
     if (!page || !links) return;
 
-    const sections = ["om", "innehall", "projekt", "kurser", "framtid"]
+    const sections = ["om", "innehall", "projekt", "kurser", "framtid", "program-map"]
       .map((id) => page.querySelector(`#${id}`))
       .filter(Boolean);
     const visibleSections = new Set();
@@ -709,6 +719,13 @@ export default function ProgramShow({
                 onClick={() => scrollTo("framtid")}
               >
                 EFTER GYMNASIET
+              </button>
+              <button
+                className="program-show__quick-link"
+                data-section="program-map"
+                onClick={() => scrollTo("program-map")}
+              >
+                LOKALER
               </button>
             </div>
           </div>
@@ -910,7 +927,24 @@ export default function ProgramShow({
         </div>
       </section>
 
-      <OpenHouseInteractive></OpenHouseInteractive>
+      <div className="ticker flex justify-center">
+
+          <span className="pl-6 text-[20px]">↓ Här kan du hitta {programmename} klassrummet ↓</span>
+
+
+      </div>
+
+      <div id="program-map">
+        <OpenHouseInteractive
+          key={programmename}
+          initialRoom={programMapRooms[programmename] ?? "Karta"}
+          allowedRooms={
+            programMapRooms[programmename]
+              ? [programMapRooms[programmename]]
+              : undefined
+          }
+        />
+      </div>
 
           <BackToTop />
     </main>
