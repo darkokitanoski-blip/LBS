@@ -443,7 +443,7 @@ const programMapRooms = {
   grafiskdesign: "Dupp",
   aiwebutveckling: "D",
   spelgrafik: "D",
-  fotofilm: "Studion",
+  fotofilm: "C",
   musikproduktion: "Studion",
 };
 
