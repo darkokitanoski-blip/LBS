@@ -7,7 +7,7 @@ const ButtonClassroom = ({ id, style, onClick, children }) => {
             onClick={onClick}
             className="classroom-map-button"
         >
-            {children}
+            {children} 
         </button>
     )
 }

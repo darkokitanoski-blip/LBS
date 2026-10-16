@@ -194,7 +194,7 @@ const OpenHouseInteractive = ({ initialRoom = "Karta", allowedRooms }) => {
                                         }}
                                         onClick={() => selectRoom(button.imageKey)}
                                     >
-                                        {button.label}
+                                        ↓ {button.label} ↓
                                     </ButtonClassroom>
                                 ))}
 
