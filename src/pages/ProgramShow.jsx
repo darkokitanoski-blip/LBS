@@ -6,6 +6,9 @@ import SectionTransition from "../components/SectionTransition";
 import News from "../components/News";
 import { useParams } from "react-router-dom";
 import BackToTop from "../components/BackToTop";
+
+// Visar programm sida 
+
 import {
   IoGameController,
   IoMusicalNotesSharp,

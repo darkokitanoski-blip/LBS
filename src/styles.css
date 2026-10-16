@@ -392,10 +392,12 @@ main.section-loading-b::before {
 .btn-classroom-pick {
     border: 1px solid var(--dark-cyan);
     font-family: "IBM Plex Mono", monospace;
+    z-index: 10000;
 }
 
 .btn-classroom-pick svg {
     animation: animationarrow 1.2s ease-in-out infinite;
+    z-index: 10000;
 }
 
 @keyframes animationarrow {
@@ -5857,4 +5859,21 @@ body {
         min-height: 0 !important;
         max-height: none !important;
     }
+}
+
+
+@keyframes mapFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(8px) scale(0.99);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+.animate-map-in {
+    animation: mapFadeIn 350ms ease-out both;
 }

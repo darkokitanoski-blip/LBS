@@ -2,6 +2,8 @@ import { useEffect, useRef, useState } from "react";
 import { useParams } from "react-router-dom";
 import Footer from "../components/Footer";
 import SectionTransition from "../components/SectionTransition";
+// Nyhets komponent sida
+
 
 const defaultArticle = {
   ["Började arbeta som Grafisk Design"]: {

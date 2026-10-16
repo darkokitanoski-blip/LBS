@@ -77,49 +77,49 @@ export default function Hero({ onNavigate }) {
         <MdDesignServices></MdDesignServices>
         <RiGame2Fill></RiGame2Fill>
         <PiFilmSlateFill></PiFilmSlateFill>
-                <IoGameController></IoGameController>
+        <IoGameController></IoGameController>
         <IoMusicalNotesSharp></IoMusicalNotesSharp>
         <FaCode></FaCode>
         <MdDesignServices></MdDesignServices>
         <RiGame2Fill></RiGame2Fill>
         <PiFilmSlateFill></PiFilmSlateFill>
-                <IoGameController></IoGameController>
+        <IoGameController></IoGameController>
         <IoMusicalNotesSharp></IoMusicalNotesSharp>
         <FaCode></FaCode>
         <MdDesignServices></MdDesignServices>
         <RiGame2Fill></RiGame2Fill>
         <PiFilmSlateFill></PiFilmSlateFill>
-                <IoGameController></IoGameController>
+        <IoGameController></IoGameController>
         <IoMusicalNotesSharp></IoMusicalNotesSharp>
         <FaCode></FaCode>
         <MdDesignServices></MdDesignServices>
         <RiGame2Fill></RiGame2Fill>
         <PiFilmSlateFill></PiFilmSlateFill>
-                <IoGameController></IoGameController>
+        <IoGameController></IoGameController>
         <IoMusicalNotesSharp></IoMusicalNotesSharp>
         <FaCode></FaCode>
         <MdDesignServices></MdDesignServices>
         <RiGame2Fill></RiGame2Fill>
         <PiFilmSlateFill></PiFilmSlateFill>
-                <IoGameController></IoGameController>
+        <IoGameController></IoGameController>
         <IoMusicalNotesSharp></IoMusicalNotesSharp>
         <FaCode></FaCode>
         <MdDesignServices></MdDesignServices>
         <RiGame2Fill></RiGame2Fill>
-                <MdDesignServices></MdDesignServices>
+        <MdDesignServices></MdDesignServices>
         <PiFilmSlateFill></PiFilmSlateFill>
-                        <IoGameController></IoGameController>
+        <IoGameController></IoGameController>
         <IoMusicalNotesSharp></IoMusicalNotesSharp>
         <FaCode></FaCode>
         <MdDesignServices></MdDesignServices>
         <RiGame2Fill></RiGame2Fill>
         <PiFilmSlateFill></PiFilmSlateFill>
-                <MdDesignServices></MdDesignServices>
-                <MdDesignServices></MdDesignServices>
-                <MdDesignServices></MdDesignServices>
         <MdDesignServices></MdDesignServices>
-                <MdDesignServices></MdDesignServices>
-                <MdDesignServices></MdDesignServices>
+        <MdDesignServices></MdDesignServices>
+        <MdDesignServices></MdDesignServices>
+        <MdDesignServices></MdDesignServices>
+        <MdDesignServices></MdDesignServices>
+        <MdDesignServices></MdDesignServices>
         <PiFilmSlateFill></PiFilmSlateFill>
       </div>
 
@@ -131,11 +131,14 @@ export default function Hero({ onNavigate }) {
           <h1>LBS KREATIVA<br />GYMNASIET</h1>
           <p className="hero-copy">Gymnasieutbildningar för dig som vill skapa utifrån dina idéer och utvecklas inom dagens kreativa branscher.</p>
           <div className="hero-actions">
-            <a className="button button-light" href="#about" onClick={(event) => { event.preventDefault(); onNavigate("about"); }}>OM OSS<ArrowIcon size="sm" /></a>
-            <a className="button button-light-green" href="#programs" onClick={(event) => { event.preventDefault(); onNavigate("programs"); }}>VÅRA PROGRAM <ArrowIcon size="sm" /></a>
-            <a className="button button-light-orange" href="#form" onClick={(event) => { event.preventDefault(); onNavigate("form"); }}>ANMÄL DIG <ArrowIcon size="sm" /></a>
-            <a className="button button-light-white" href="#contact" onClick={(event) => { event.preventDefault(); onNavigate("contact"); }}>KONTAKTA OSS <ArrowIcon size="sm" /></a>
             <a className="button button-light-yellow" href="#openhouse" onClick={(event) => { event.preventDefault(); onNavigate("openhouse"); }}>SKOLANS KARTA <ArrowIcon size="sm" /></a>
+            <a className="button button-light-green" href="#programs" onClick={(event) => { event.preventDefault(); onNavigate("programs"); }}>VÅRA PROGRAM <ArrowIcon size="sm" /></a>
+
+            <a className="button button-light-orange" href="#form" onClick={(event) => { event.preventDefault(); onNavigate("form"); }}>ELEV FÖR EN DAG <ArrowIcon size="sm" /></a>
+            <a className="button button-light" href="#about" onClick={(event) => { event.preventDefault(); onNavigate("about"); }}>OM OSS<ArrowIcon size="sm" /></a>
+
+            <a className="button button-light-white" href="#contact" onClick={(event) => { event.preventDefault(); onNavigate("contact"); }}>KONTAKTA OSS <ArrowIcon size="sm" /></a>
+
           </div>
         </div>
         {/* <a href="#openhouse">        

@@ -2,22 +2,18 @@ import React from 'react'
 import { FaArrowDown } from "react-icons/fa6";
 import { useState } from 'react';
 
-const ButtonClassroom = () => {
 
-    const [Level, setLevel] = useState(0);
-    console.log(Level);
-
-    const handleClick = () => {
-        const targetElement = document.getElementById('classroom');
-        if (targetElement) {
-            targetElement.scrollIntoView({ behavior: 'smooth' });
-        }
-    };
-
+// knapp komponenet för alla delar som är interaktiv för kartan
+const ButtonClassroom = ({ id, style, onClick, children }) => {
     return (
-        <button className="btn-classroom-pick bg-transparent text-black text-[9px] sm:text-[12px] w-[70px] h-[45px] sm:w-[100px] sm:h-[60px] flex flex-col items-center justify-center gap-1" onClick={handleClick}>
-            KLICKA MIG
-            <FaArrowDown />
+        <button
+            id={id}
+            type="button"
+            style={style}
+            onClick={onClick}
+            className="z-10 rounded-full px-3 py-2 bg-pink-500 text-white font-bold hover:scale-110 transition-transform"
+        >
+            {children}
         </button>
     )
 }

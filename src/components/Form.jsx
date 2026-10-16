@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react";
 
+
+// komponent för form del, där användaren kommer vara redirektad till LBS officiela sida för att anmäla sig
 const Form = () => {
     const [isMobile, setIsMobile] = useState(false);
     const [isExpanded, setIsExpanded] = useState(false);
@@ -32,64 +34,6 @@ const Form = () => {
         setIsExpanded((prev) => !prev);
     };
 
-    // kanske 
-    const handleSubmit = async (e) => {
-        e.preventDefault();
-
-        const form = e.currentTarget;
-        const formData = new FormData(form);
-
-        const firstName = formData.get("firstName");
-        const lastName = formData.get("lastName");
-        const email = formData.get("email");
-        const phone = formData.get("mobilePhoneNumber");
-        const startYear = formData.get("startOfStudies-118922");
-        const subject = encodeURIComponent("Anmälan – Elev för en dag");
-        const programValues = formData.getAll("progorgmappings");
-
-        const programs = [];
-
-        const programNames = {
-            "b0a9117a-2087-f011-b4cb-000d3ab075aa": "AI och webbutveckling",
-            "0a69d198-f2eb-e911-a812-000d3ab46f05": "Foto & film",
-            "27a6afa0-f1eb-e911-a812-000d3ab46f05": "Grafisk design",
-            "e37000bf-f1eb-e911-a812-000d3ab46f05": "Spelgrafik",
-            "bd5e23b8-f2eb-e911-a812-000d3ab46f05": "Spelutveckling"
-        };
-
-        programValues.forEach((value) => {
-            if (programNames[value]) {
-                programs.push(programNames[value]);
-            }
-        });
-
-
-        const body = encodeURIComponent(`
-ANMÄLAN – ELEV FÖR EN DAG
-
-KONTAKTUPPGIFTER
-────────────────────────
-Förnamn: ${firstName}
-Efternamn: ${lastName}
-E-post: ${email}
-Mobilnummer: ${phone}
-
-PROGRAM
-────────────────────────
-${programs.map(p => `• ${p}`).join("\n")}
-
-GYMNASIESTART
-────────────────────────
-Startår: ${startYear}
-
-SAMTYCKE
-────────────────────────
-Samtycke: Ja
-`);
-
-        window.location.href =
-            `mailto:mcat40310@gmail.com?subject=${subject}&body=${body}`;
-    };
 
     return (
         <div className="form flex-col md:flex-row lg:flex gap-20 pt-20 " id="form">
