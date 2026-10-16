@@ -13,7 +13,7 @@ const roompick = {
     C: {
         image: "/C_pink_copy.png",
         title: "C-BYGGNADEN",
-        description: "Planritning över C-byggnaden, film & film ligger här.",
+        description: "Planritning över C-byggnaden, foto & film ligger här.",
     },
     F: {
         image: "/Fakiren_map.png_double.png",
@@ -43,7 +43,7 @@ const roompick = {
     Aner: {
         image: "/IMG_8195.png",
         title: "A-BYGGNADEN · ANDRA VÅNINGEN",
-        description: "Planritning över A-byggnadens andra våning, spelutvekling ligger här. Välj tredje våningen för att fortsätta.",
+        description: "Planritning över A-byggnadens andra våning, spelutveckling ligger här. Välj tredje våningen för att fortsätta.",
     },
 }
 
