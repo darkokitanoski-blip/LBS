@@ -65,7 +65,7 @@ export default function Header({ onNavigate, activeSection }) {
         }}
       >
         <span className="brand-box">
-          <img src="/LBS_Logotyp_Symbol_RGB_Vit.svg" alt="LBS" />
+          <img src="/lbslogosvg.svg" alt="LBS" />
         </span>
 
       </a>
