@@ -36,7 +36,7 @@ const programs = [
     color: "green"
   },
   {
-    title: <><span>AI &</span><span>WEBUTVECKLING</span></>,
+    title: <><span>AI &</span><span>WEBBUTVECKLING</span></>,
     link: "/program/aiwebutveckling",
     src: "/photo-1593720219276-0b1eacd0aef4.jpg",
     icon: <FaCode className="card-pixel" />,

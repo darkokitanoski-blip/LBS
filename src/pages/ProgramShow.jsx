@@ -180,7 +180,7 @@ const programs = {
     title: (
       <>
         <span>AI & </span>
-        <span>WEBBUTVECKLING</span>
+        <span style={{letterSpacing: "0px"}}>WEBBUTVECKLING</span>
       </>
     ),
 
