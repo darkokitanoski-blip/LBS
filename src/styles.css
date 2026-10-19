@@ -6007,13 +6007,6 @@ body {
     outline-offset: 3px;
 }
 
-.classroom-map-label {
-    z-index: 11;
-
-    text-align: center;
-    white-space: nowrap;
-}
-
 @media (max-width: 760px) {
     #openhouse.openhouse-map-section {
         justify-content: flex-start;
@@ -6055,12 +6048,6 @@ body {
         font-size: clamp(.7rem, 3.2vw, .85rem);
     }
 
-    .classroom-map-label {
-        max-width: 24%;
-        padding: .15rem .25rem;
-        font-size: clamp(.625rem, 2.5vw, .8rem);
-        margin-top: 30px;
-    }
 }
 
 @media (max-width: 900px) {

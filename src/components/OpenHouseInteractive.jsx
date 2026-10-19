@@ -67,41 +67,6 @@ const OpenHouseInteractive = ({ initialRoom = "Karta", allowedRooms }) => {
         }
     }, [])
 
-    const labels = [
-        {
-            id: "lobby",
-            label: "Lobby",
-            roomKey: "Aupp",
-            x: 66,
-            y: 55,
-            visible: true,
-        },
-        {
-            id: "A7",
-            label: "A7",
-            roomKey: "Aner",
-            x: 17,
-            y: 30,
-            visible: true,
-        },
-        {
-            id: "A3",
-            label: "A3",
-            roomKey: "Aner",
-            x: 79,
-            y: 36,
-            visible: true,
-        },
-        {
-            id: "A5",
-            label: "A5",
-            roomKey: "Aner",
-            x: 44.5,
-            y: 28,
-            visible: true,
-        },
-    ]
-
     const buttons = [
         {
             id: "button-c",
@@ -233,23 +198,6 @@ const OpenHouseInteractive = ({ initialRoom = "Karta", allowedRooms }) => {
                                     </ButtonClassroom>
                                 ))}
 
-                        {labels
-                            .filter(label => label.visible && label.roomKey === roomSelected)
-                            .map(label => (
-                                <span
-                                    key={label.id}
-                                    id={label.id}
-                                    className="classroom-map-label"
-                                    style={{
-                                        position: "absolute",
-                                        left: `${label.x}%`,
-                                        top: `${label.y}%`,
-                                        transform: "translate(-50%, -50%)",
-                                    }}
-                                >
-                                    {label.label}
-                                </span>
-                            ))}
 
                         {showAnerNavigation && (
                             <>
