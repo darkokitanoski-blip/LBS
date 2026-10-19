@@ -43,7 +43,7 @@ const roompick = {
     Aner: {
         image: "/AnerIMG.png",
         title: "A-BYGGNADEN · ANDRA VÅNINGEN",
-        description: "Planritning över A-byggnadens andra våning, Teknik(spelutveckling och AI & Webbutveckling) i klassrum A7, Spelgrafik i A3 och i A5 finns filmer för visning för Fotofilm. ligger här. Välj tredje våningen för att fortsätta.",
+        description: "Planritning över A-byggnadens andra våning, Teknik(spelutveckling och AI & Webbutveckling) i klassrum A7, Spelgrafik i A3 och i A5 finns filmer för visning för Fotofilm. Välj tredje våningen för att fortsätta.",
     },
 }
 
