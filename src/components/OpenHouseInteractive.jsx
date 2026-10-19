@@ -18,12 +18,12 @@ const roompick = {
     F: {
         image: "/Fakiren_map.png_double.png",
         title: "F-BYGGNADEN",
-        description: "Planritning över F-byggnaden. Musik produktion ligger här också",
+        description: "Planritning över F-byggnaden. Musik produktion elever har ett klassrum här också",
     },
     D: {
         image: "/D1_och_D2_nr2.png",
         title: "D-BYGGNADEN · FÖRSTA VÅNINGEN",
-        description: "Första våningens planritning, ai & web utvekling och spelgrafik ligger här. Välj andra våningen för att fortsätta upp i byggnaden.",
+        description: "Första våningens planritning. Eleverna har AI & webbutveckling och spelgrafik här. Välj andra våningen för att fortsätta upp i byggnaden.",
     },
     Dupp: {
         image: "/Map_D3_Recovered_GD.png",
@@ -33,17 +33,17 @@ const roompick = {
     Studion: {
         image: "/Sudion_bla_textt.png",
         title: "STUDION",
-        description: "Planritning över studion och dess lokaler för musik produktion samt foto & film.",
+        description: "Planritning över studion och dess lokaler för musik produktion.",
     },
     Aupp: {
         image: "/Lobbyyyyy_copy.png",
         title: "A-BYGGNADEN · TREDJE VÅNINGEN",
-        description: "Planritning över A-byggnadens tredje våning. Lobby och skolkurator ligger här. ",
+        description: "Planritning över A-byggnadens tredje våning. Lobby, administration och elevhälsa ligger här. ",
     },
     Aner: {
         image: "/IMG_8195.png",
         title: "A-BYGGNADEN · ANDRA VÅNINGEN",
-        description: "Planritning över A-byggnadens andra våning, spelutveckling ligger här. Välj tredje våningen för att fortsätta.",
+        description: "Planritning över A-byggnadens andra våning, Teknik(spelutveckling och AI & Webbutveckling) i klassrum A7, Spelgrafik i A3 och i A5 finns filmer för visning för Fotofilm. ligger här. Välj tredje våningen för att fortsätta.",
     },
 }
 
@@ -66,6 +66,41 @@ const OpenHouseInteractive = ({ initialRoom = "Karta", allowedRooms }) => {
             preloadedImages.current = []
         }
     }, [])
+
+    const labels = [
+        {
+            id: "lobby",
+            label: "Lobby",
+            roomKey: "Aupp",
+            x: 66,
+            y: 55,
+            visible: true,
+        },
+        {
+            id: "A7",
+            label: "A7",
+            roomKey: "Aner",
+            x: 17,
+            y: 30,
+            visible: true,
+        },
+        {
+            id: "A3",
+            label: "A3",
+            roomKey: "Aner",
+            x: 79,
+            y: 36,
+            visible: true,
+        },
+        {
+            id: "A5",
+            label: "A5",
+            roomKey: "Aner",
+            x: 44.5,
+            y: 28,
+            visible: true,
+        },
+    ]
 
     const buttons = [
         {
@@ -197,6 +232,24 @@ const OpenHouseInteractive = ({ initialRoom = "Karta", allowedRooms }) => {
                                         ↓ {button.label} ↓
                                     </ButtonClassroom>
                                 ))}
+
+                        {labels
+                            .filter(label => label.visible && label.roomKey === roomSelected)
+                            .map(label => (
+                                <span
+                                    key={label.id}
+                                    id={label.id}
+                                    className="classroom-map-label"
+                                    style={{
+                                        position: "absolute",
+                                        left: `${label.x}%`,
+                                        top: `${label.y}%`,
+                                        transform: "translate(-50%, -50%)",
+                                    }}
+                                >
+                                    {label.label}
+                                </span>
+                            ))}
 
                         {showAnerNavigation && (
                             <>

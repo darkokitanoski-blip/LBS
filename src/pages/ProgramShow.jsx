@@ -441,9 +441,9 @@ const programMapRooms = {
   spelutveckling: "Aner",
 
   grafiskdesign: "Dupp",
-  aiwebutveckling: "D",
-  spelgrafik: "D",
-  fotofilm: "C",
+  aiwebutveckling: "Aner",
+  spelgrafik: "Aner",
+  fotofilm: "Aner",
   musikproduktion: "Studion",
 };
 
