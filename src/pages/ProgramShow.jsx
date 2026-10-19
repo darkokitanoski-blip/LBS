@@ -180,7 +180,7 @@ const programs = {
     title: (
       <>
         <span>AI & </span>
-        <span>WEBUTVECKLING</span>
+        <span>WEBBUTVECKLING</span>
       </>
     ),
 
